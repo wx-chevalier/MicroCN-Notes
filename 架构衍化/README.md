@@ -36,6 +36,8 @@ SOA 是一个组件模型，它将应用程序的不同功能单元（称为服�
 
 ![](https://i.postimg.cc/mkMy155d/image.png)
 
+![Dubbo 微服务治理](https://s2.ax1x.com/2019/12/10/QDzIMt.png)
+
 对于微服务，不同背景的人也有不同的见解，对于熟悉 SOA 的开发者，微服务也可以认为是去除了 ESB 的 SOA 的一种实现方案；ESB 是 SOA 架构中的中心总线，设计图形应该是星形的，而微服务是去中心化的分布式软件架构。SOA 更多强调重用，而微服务偏向于重写。SOA 偏向水平服务，微服务偏向垂直服务；SOA 偏向自上而下的设计，微服务偏向自下而上的设计。
 
 ![](https://i.postimg.cc/XNmDQrKL/image.png)
