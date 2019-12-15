@@ -2,7 +2,7 @@
 
 ![](https://tva1.sinaimg.cn/large/007rAy9hgy1g2uxeyyhdfj30t20hc3za.jpg)
 
-图中的6个步骤的含义解释如下：
+图中的 6 个步骤的含义解释如下：
 
 0、服务容器负责启动，加载，运行服务提供者。
 
@@ -19,3 +19,5 @@
 # 链接
 
 - [Dubbo 原理解析](http://blog.csdn.net/column/details/learningdubbo.html)
+
+- https://www.funtl.com/zh/apache-dubbo-rpc/Dubbo-%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%B2%BB%E7%90%86.html#%E6%9C%AC%E8%8A%82%E8%A7%86%E9%A2%91

@@ -5,3 +5,4 @@ Dubbo 的 provider 不在关心服务注册的事宜，只需要把其 Dubbo 服
 # 链接
 
 - https://github.com/apache/dubbo-kubernetes
+- http://bucket.k8smeetup.com/%E6%9C%B1%E6%98%BE%E6%9D%B0-Kubernetes%E4%B8%8EDubbo%E7%BB%93%E5%90%88%E7%9A%84%E5%AE%9E%E8%B7%B5%E4%B9%8B%E8%B7%AF.pdf
