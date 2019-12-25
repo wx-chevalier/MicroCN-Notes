@@ -6,7 +6,7 @@ Istio 是由 Google、IBM、Lyft 等共同开源的 Service Mesh（服务网格�
 
 ![](https://res.cloudinary.com/jimmysong/image/upload/images/istio-arch.jpg)
 
-## Istio
+# 背景分析
 
 在 Kubernetes 之后，Istio 是最受欢迎的云原生技术。它就是一种服务网格，能够安全的连接一个应用程序之间的多个微服务。你也可以将它视为内部和外部的负载均衡器，具有策略驱动的防火墙，支持各种全面指标。开发者和使用者倾向于 Istio 的原因是因为它具有无侵入式的部署模式，而且任何 Kubernetes 的服务都能够在不需要改动代码和配置的情况下和 Istio 进行无缝连接。
 
@@ -48,3 +48,8 @@ Istio-Manager 用作用户和 Istio 之间的接口，收集和验证配置，�
 ## Istio-auth
 
 Istio-Auth 提供强大的服务间和最终用户认证，使用相互 TLS，内置身份和凭据管理。它可用于升级 service mesh 中的未加密流量，并为运营商提供基于服务身份而不是网络控制的策略的能力。Istio 的未来版本将增加细粒度的访问控制和审计，以使用各种访问控制机制（包括属性和基于角色的访问控制以及授权 hook）来控制和监控访问你服务、API 或资源的人员。
+
+# 链接
+
+- https://www.servicemesher.com/blog/istio-kubernetes-service-mesh/
+- https://www.servicemesher.com/blog/back-to-microservices-with-istio-p1/
