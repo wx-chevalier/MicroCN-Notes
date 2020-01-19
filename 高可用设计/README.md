@@ -29,7 +29,7 @@ QoS(Quality of Service)，顾名思义，QoS 就是服务质量的缩写。QoS �
 
 
 
-## Home & More | 延伸阅读
+## Copyright & More | 延伸阅读
 
 ![技术视野](https://s2.ax1x.com/2019/12/03/QQJLvt.png)
 
