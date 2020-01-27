@@ -22,7 +22,7 @@ RPC 可以解决这些问题，它把网络交互类比为“client 访问 serve
 连接断开时可以重试。
 如果 server 没有在给定时间内回复，client 会返回超时错误。
 
-既然是基于消息，那么跑不掉两种模式： Point-to-Point， Message Broker。P2P 的模式大家都了解的，就是启动箭头端口，然后等其他应用连接上来，load balance 等都是由 SDK 或者 sidecar 来搞定。Message Broker 就不一样啦，你只需要将消息发送到 broker，然后就不用管啦，这些路由等，都是由 message broker 搞定，完全透明。这篇文章我们主要讲基于 Message Broker 来做 RPC 通讯，也就是 RSocket Broker 负责完成所有的路由等功能。
+既然是基于消息，那么跑不掉两种模式： Point-to-Point，Message Broker。P2P 的模式大家都了解的，就是启动箭头端口，然后等其他应用连接上来，load balance 等都是由 SDK 或者 sidecar 来搞定。Message Broker 就不一样啦，你只需要将消息发送到 broker，然后就不用管啦，这些路由等，都是由 message broker 搞定，完全透明。这篇文章我们主要讲基于 Message Broker 来做 RPC 通讯，也就是 RSocket Broker 负责完成所有的路由等功能。
 
 基于消息的 RPC 通讯，这个消息的格式还有一点点不同，之前文章介绍过，我们这里再细化一下。RPC Message 主要有三个部分：
 
