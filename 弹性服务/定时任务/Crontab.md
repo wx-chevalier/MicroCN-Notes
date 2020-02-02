@@ -1,8 +1,5 @@
 # Crontab
 
-> - [Linux 下的定时任务，Crontab 用法](http://www.cnblogs.com/b028/archive/2011/01/07/1930243.html)
-> - [Cron 表达式生成器](http://www.pdtools.net/tools/becron.jsp)
-
 要写个在 Linux 下定时更新系统的脚本，man crondtab 不甚详细，现将网络上的介绍列举如下：
 
 crontab 是一个很方便的在 unix/linux 系统上定时(循环)执行某个任务的程序使用 cron 服务，用 service crond status 查看 cron 服务状态，如果没有启动则 service crond start 启动它，cron 服务是一个定时执行的服务，可以通过 crontab 命令添加或者编辑需要定时执行的任务：
@@ -50,13 +47,15 @@ crontab 文件中的行由 6 个字段组成，不同字段间用空格或 tab �
 星期几(0-6，其中 0 代表星期日)
 第 6 个字段是一个要在适当时间执行的字符串
 例子:
+
+```sh
 #MIN HOUR DAY MONTH DAYOFWEEK COMMAND #每天早上 6 点 10 分
-10 6 \* \* _ date #每两个小时
-0 _/2 \* \* _ date (solaris 5.8 似乎不支持此种写法) #晚上 11 点到早上 8 点之间每两个小时，早上 8 点
-0 23-7/2，8 _ \* _ date #每个月的 4 号和每个礼拜的礼拜一到礼拜三的早上 11 点
+10 6 * * _ date #每两个小时
+0 23-7/2，8 _ * _ date #每个月的 4 号和每个礼拜的礼拜一到礼拜三的早上 11 点
 0 11 4 _ mon-wed date
 #1 月份日早上 4 点
-0 4 1 jan \* date
+0 4 1 jan * date
+```
 
 ![](http://fs.gimoo.net/img/2014/10/12/011835_5439666b84167.jpg)
 
@@ -80,3 +79,8 @@ crontab 文件中的行由 6 个字段组成，不同字段间用空格或 tab �
 cron 是一个可以用来根据时间、日期、月份、星期的组合来调度对重复任务的执行的守护进程。
 
 cron 假定系统持续运行。如果当某任务被调度时系统不在运行，该任务就不会被执行。
+
+# 链接
+
+- [Linux 下的定时任务，Crontab 用法](http://www.cnblogs.com/b028/archive/2011/01/07/1930243.html)
+- [Cron 表达式生成器](http://www.pdtools.net/tools/becron.jsp)
