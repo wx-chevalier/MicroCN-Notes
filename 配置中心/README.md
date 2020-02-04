@@ -8,16 +8,15 @@
 
 ```java
 public class AppConfig {
+  private int connectTimeoutInMills = 5000;
 
-    private int connectTimeoutInMills = 5000;
+  public int getConnectTimeoutInMills() {
+    return connectTimeoutInMills;
+  }
 
-    public int getConnectTimeoutInMills() {
-        return connectTimeoutInMills;
-    }
-
-    public void setConnectTimeoutInMills(int connectTimeoutInMills) {
-        this.connectTimeoutInMills = connectTimeoutInMills;
-    }
+  public void setConnectTimeoutInMills(int connectTimeoutInMills) {
+    this.connectTimeoutInMills = connectTimeoutInMills;
+  }
 }
 ```
 

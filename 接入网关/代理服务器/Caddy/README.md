@@ -1,5 +1,3 @@
-
-
 # 清新脱俗的 Web 服务器 Caddy
 
 作为新兴 Web 服务器，Caddy 提供了很多简单易用的功能而没有历史的包袱，其默认支持并且能帮你自动配置 HTTP/2、HTTPS，对于 IPV6、WebSockets 都有很好的支持。基于 Go 编写的 Caddy 天生对于多核具有很好的支持，并且其丰富的插件系统提供了文件管理、文件上传、基于 MarkDown 的博客系统等等开箱即用的扩展功能。我们可以在[官方下载界面](https://caddyserver.com/download)选择你需要的插件功能定制个性化二进制文件，下载完毕之后即可以使用`caddy`命令直接运行。其默认监听 2015 端口，在浏览器中打开 [http://localhost:2015](http://localhost:2015)  即可以查看其运行情况。我们也可以通过`-conf`参数指定配置文件：
@@ -225,13 +223,13 @@ websocket [path] command
 
 ```js
 if (window.WebSocket != undefined) {
-  var connection = new WebSocket('ws://localhost:2015/echo');
+  var connection = new WebSocket("ws://localhost:2015/echo");
   connection.onmessage = wsMessage;
 
   connection.onopen = wsOpen;
 
   function wsOpen(event) {
-    connection.send('Hello World');
+    connection.send("Hello World");
   }
   function wsMessage(event) {
     console.log(event.data);
@@ -245,14 +243,14 @@ function wsMessage(event) {
 然后在服务端接收该请求并且将客户端输入的内容返回：
 
 ```js
-var readline = require('readline');
+var readline = require("readline");
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
   terminal: false
 });
 
-rl.on('line', function(line) {
+rl.on("line", function(line) {
   console.log(line);
 });
 ```

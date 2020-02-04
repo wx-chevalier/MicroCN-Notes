@@ -1,5 +1,3 @@
-
-
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/8/1/Microservices.png)
 
 # 基于 Docker Swarm 的(简单)微服务编排与治理
