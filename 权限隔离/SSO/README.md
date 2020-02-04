@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/WzXsh0MX/image.png)](https://parg.co/UdT)
-
 # SSO
 
 # 框架对比

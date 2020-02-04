@@ -1,5 +1,3 @@
-[![返回目录](https://i.postimg.cc/WzXsh0MX/image.png)](https://parg.co/UdT)
-
 ![JWT](https://s2.ax1x.com/2020/01/06/lykdTf.png)
 
 # JWT 机制详解
