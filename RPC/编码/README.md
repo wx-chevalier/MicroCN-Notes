@@ -5,7 +5,7 @@
 1. 在内存中，数据保存在对象，结构体，列表，数组，哈希表，树等中。 这些数据结构针对 CPU 的高效访问和操作进行了优化（通常使用指针）。
 2. 如果要将数据写入文件，或通过网络发送，则必须将其编码（encode）为某种自包含的字节序列（例如，JSON 文档）。 由于每个进程都有自己独立的地址空间，一个进程中的指针对任何其他进程都没有意义，所以这个字节序列表示会与通常在内存中使用的数据结构完全不同。
 
-序列化(serialization、marshalling)的过程是指将数据结构或者对象的状态转换成可以存储(比如文件、内存)或者传输的格式(比如网络)。反向操作就是反序列化(deserialization、unmarshalling)的过程。从内存中表示到字节序列的转换称为 编码（Encoding） （也称为序列化（serialization）或编组（marshalling）），反过来称为解码（Decoding）（解析（Parsing），反序列化（deserialization），反编组( unmarshalling））。
+序列化(serialization、marshalling)的过程是指将数据结构或者对象的状态转换成可以存储(比如文件、内存)或者传输的格式(比如网络)。反向操作就是反序列化(deserialization、unmarshalling)的过程。从内存中表示到字节序列的转换称为 编码（Encoding）（也称为序列化（serialization）或编组（marshalling）），反过来称为解码（Decoding）（解析（Parsing），反序列化（deserialization），反编组( unmarshalling））。
 
 # 语言特定的格式
 
@@ -62,7 +62,7 @@ JSON 比 XML 简洁，但与二进制格式一比，还是太占地方。这一�
 
 # Thrift 与 Protocol Buffers
 
-Apache Thrift 【15】和 Protocol Buffers（protobuf）【16】是基于相同原理的二进制编码库。 Protocol Buffers 最初是在 Google 开发的，Thrift 最初是在 Facebook 开发的，并且在 2007~2008 年都是开源的【17】。 Thrift 和 Protocol Buffers 都需要一个模式来编码任何数据。要在 Thrift 的例 4-1 中对数据进行编码，可以使用 Thrift 接口定义语言（IDL） 来描述模式，如下所示：
+Apache Thrift 【15】和 Protocol Buffers（protobuf）【16】是基于相同原理的二进制编码库。 Protocol Buffers 最初是在 Google 开发的，Thrift 最初是在 Facebook 开发的，并且在 2007~2008 年都是开源的【17】。 Thrift 和 Protocol Buffers 都需要一个模式来编码任何数据。要在 Thrift 的例 4-1 中对数据进行编码，可以使用 Thrift 接口定义语言（IDL）来描述模式，如下所示：
 
 ```json
 struct Person {

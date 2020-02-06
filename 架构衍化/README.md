@@ -16,7 +16,7 @@
 
 # SOA 面向服务架构
 
-SOA（Service-Oriented Architecture） 面向服务架构，是在互联网应用规模迅速增长，集中式架构已无法做到无限制地提升系统的吞吐量的背景下，产生的涉及模块化开发、分布式扩展部署等相对宽泛的概念。
+SOA（Service-Oriented Architecture）面向服务架构，是在互联网应用规模迅速增长，集中式架构已无法做到无限制地提升系统的吞吐量的背景下，产生的涉及模块化开发、分布式扩展部署等相对宽泛的概念。
 
 ![](https://i.postimg.cc/g2sRJB03/image.png)
 
