@@ -1,20 +1,33 @@
   - [RPC](/RPC/README.md)
+    - [协议编码](/RPC/协议编码/README.md)
+      - [Avro](/RPC/协议编码/Avro/README.md)
+        - [Java](/RPC/协议编码/Avro/Java.md)
+        - [模式演变](/RPC/协议编码/Avro/模式演变.md)
+      - [JSON](/RPC/协议编码/JSON/README.md)
+        - [JSONSchema](/RPC/协议编码/JSON/JSONSchema.md)
+        - [二进制编码](/RPC/协议编码/JSON/二进制编码.md)
+      - [Protobuf](/RPC/协议编码/Protobuf/README.md)
+        - [类型定义](/RPC/协议编码/Protobuf/类型定义.md)
+      - [Thrift](/RPC/协议编码/Thrift/README.md)
+        
+    - [数据流](/RPC/数据流/README.md)
+      
+  - RPC 框架
+    - [Dubbo](/RPC%20框架/Dubbo/README.md)
+      - [Kubernetes](/RPC%20框架/Dubbo/Kubernetes/README.md)
+        - [Kubernetes 与 Dubbo](/RPC%20框架/Dubbo/Kubernetes/Kubernetes%20与%20Dubbo.md)
+      - [架构机制](/RPC%20框架/Dubbo/架构机制/README.md)
+        
+      - [踩坑汇总](/RPC%20框架/Dubbo/踩坑汇总.md)
     - Rpcx
-      - [REAMDE](/RPC/Rpcx/REAMDE.md)
-    - [Scratch](/RPC/Scratch/README.md)
-      - [Go RPC 框架](/RPC/Scratch/Go%20RPC%20框架.md)
-      - [Java RPC 框架](/RPC/Scratch/Java%20RPC%20框架.md)
-    - [ServiceComb](/RPC/ServiceComb/README.md)
+      - [REAMDE](/RPC%20框架/Rpcx/REAMDE.md)
+    - [Scratch](/RPC%20框架/Scratch/README.md)
+      - [Go RPC 框架](/RPC%20框架/Scratch/Go%20RPC%20框架.md)
+      - [Java RPC 框架](/RPC%20框架/Scratch/Java%20RPC%20框架.md)
+    - [ServiceComb](/RPC%20框架/ServiceComb/README.md)
       
-    - [gRPC](/RPC/gRPC/README.md)
+    - [gRPC](/RPC%20框架/gRPC/README.md)
       
-    - [编码](/RPC/编码/README.md)
-      - [Avro](/RPC/编码/Avro/README.md)
-        - [Java](/RPC/编码/Avro/Java.md)
-      - [JSON](/RPC/编码/JSON/README.md)
-        - [JSONSchema](/RPC/编码/JSON/JSONSchema.md)
-      - [Protobuf](/RPC/编码/Protobuf/README.md)
-        - [类型语法](/RPC/编码/Protobuf/类型语法.md)
   - [ServiceMesh](/ServiceMesh/README.md)
     - [Envoy](/ServiceMesh/Envoy/README.md)
       
