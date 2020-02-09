@@ -12,6 +12,8 @@
         
     - [数据流](/RPC/数据流/README.md)
       
+    - [服务发现](/RPC/服务发现/README.md)
+      
   - RPC 框架
     - [Dubbo](/RPC%20框架/Dubbo/README.md)
       - [Kubernetes](/RPC%20框架/Dubbo/Kubernetes/README.md)
