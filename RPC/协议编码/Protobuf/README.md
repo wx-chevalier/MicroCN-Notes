@@ -10,7 +10,7 @@ Protobuf 公布出来也得到了大家的广泛的关注，逐步地也得到�
 
 ## 压缩对比
 
-Protocol Buffers 只有一种二进制编码格式，它的打包方式与 Thrift 稍有不同，但与 Thrift 的 CompactProtocol 非常相似。 Protobuf 将同样的记录塞进了 33 个字节中。对于如下的定义：
+Protocol Buffers 只有一种二进制编码格式，它的打包方式与 Thrift 稍有不同，但与 Thrift 的 CompactProtocol 非常相似 Protobuf 将同样的记录塞进了 33 个字节中。对于如下的定义：
 
 ```js
 message Person {

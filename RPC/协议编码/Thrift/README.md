@@ -1,6 +1,6 @@
 # Thrift
 
-Thrift 和 Protocol Buffers 每一个都带有一个代码生成工具，它采用了类似于这里所示的模式定义，并且生成了以各种编程语言实现模式的类。您的应用程序代码可以调用此生成的代码来对模式的记录进行编码或解码。 用这个模式编码的数据是什么样的？令人困惑的是，Thrift 有两种不同的二进制编码格式，分别称为 BinaryProtocol 和 CompactProtocol（实际上，Thrift 有三种二进制协议：CompactProtocol 和 DenseProtocol，尽管 DenseProtocol 只支持 C ++实现，所以不算作跨语言）。
+Thrift 和 Protocol Buffers 每一个都带有一个代码生成工具，它采用了类似于这里所示的模式定义，并且生成了以各种编程语言实现模式的类。您的应用程序代码可以调用此生成的代码来对模式的记录进行编码或解码用这个模式编码的数据是什么样的？令人困惑的是，Thrift 有两种不同的二进制编码格式，分别称为 BinaryProtocol 和 CompactProtocol（实际上，Thrift 有三种二进制协议：CompactProtocol 和 DenseProtocol，尽管 DenseProtocol 只支持 C ++实现，所以不算作跨语言）。
 
 # BinaryProtocol
 
