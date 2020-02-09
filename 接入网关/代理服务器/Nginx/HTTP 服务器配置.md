@@ -396,7 +396,7 @@ logcation 的几个使用实例：
 
 2)location =/ {}：仅仅匹配/
 
-3)location ~\\\\\\\\\* \.(gif|jpg|jpeg)\$
+3)location ~\\\\\\\\\\* \.(gif|jpg|jpeg)\$
 
      ｛
 
@@ -440,7 +440,7 @@ if (\$http_user_agent ~ MSIE) {
 
 }
 
-**目录自动加“/” ，这个功能一般浏览器自动完成**
+**目录自动加“/”，这个功能一般浏览器自动完成**
 
 if (-d \$request_filename){
 

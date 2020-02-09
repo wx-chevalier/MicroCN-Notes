@@ -16,7 +16,7 @@
 
 # 语言特定的格式
 
-许多编程语言都内建了将内存对象编码为字节序列的支持。例如，Java 有 java.io.Serializable ，Ruby 有 Marshal，Python 有 pickle 等等。许多第三方库也存在，例如 Kryo for Java 。
+许多编程语言都内建了将内存对象编码为字节序列的支持。例如，Java 有 java.io.Serializable，Ruby 有 Marshal，Python 有 pickle 等等。许多第三方库也存在，例如 Kryo for Java 。
 
 这些编码库非常方便，可以用很少的额外代码实现内存对象的保存与恢复。但是它们也有一些深层次的问题：
 

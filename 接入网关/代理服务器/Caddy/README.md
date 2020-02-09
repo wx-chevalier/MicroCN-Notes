@@ -362,7 +362,7 @@ jwt {
 }
 ```
 
-譬如我们预设了两个令牌：`user: someone` 与 `role: member` ，我们的配置项如下：
+譬如我们预设了两个令牌：`user: someone` 与 `role: member`，我们的配置项如下：
 
 ```
 jwt {

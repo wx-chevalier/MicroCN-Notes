@@ -4,7 +4,7 @@
 
 # 服务治理
 
-Dubbo 原有体系里的服务治理是强依赖于 IP，当配置了一套服务治理规则的时候，最后都是基于一个或多个 IP 地址。到 Kubernetes 体系下之后，要考虑的是 Pod 的 IP 不是固定的。所以当前的路由规则不能满足条件，而且会产生很多规则垃圾数据。Kubernetes 体系下，通过 Service 查找 Pod ，是基于 label selector ；通过 deployment 管理 Pod ，其实也是基于 Pod label selector 。所以 Pod label selector 是在 Kubernetes 习题中比较通用的解决方案。
+Dubbo 原有体系里的服务治理是强依赖于 IP，当配置了一套服务治理规则的时候，最后都是基于一个或多个 IP 地址。到 Kubernetes 体系下之后，要考虑的是 Pod 的 IP 不是固定的。所以当前的路由规则不能满足条件，而且会产生很多规则垃圾数据。Kubernetes 体系下，通过 Service 查找 Pod，是基于 label selector ；通过 deployment 管理 Pod，其实也是基于 Pod label selector 。所以 Pod label selector 是在 Kubernetes 习题中比较通用的解决方案。
 
 以路由规则为例，需要支持一种新的路由规则：label 路由。通过一定条件匹配之后，将结果定位到以 label selector 查询到的 Pod 列表里，而非原来的 IP 列表。应用获取当前 Pod 的信息方式：
 
@@ -32,7 +32,7 @@ Kubernetes 体系下，RPC 服务发现有几种方式：
 
 - API Server ：Client 端直接请求 API Server，获取到 Pod 的列表，Client 自己决定访问 Pod 的逻辑。同时获取的时候增加 watch，API Server 会将 Pod 的变化信息同步 Client。
 
-通过拿到 Server 端的 IP 或者 host ，Client 端就可以发起 http 或者其他协议的请求。
+通过拿到 Server 端的 IP 或者 host，Client 端就可以发起 http 或者其他协议的请求。
 
 ## Dubbo + ZooKeeper Pod Cluster（HSF+CS cluster）
 
@@ -66,7 +66,7 @@ Dubbo 可以直接使用指定 IP + 端口的方式调用同一个 Pod 下 Envoy
 
 ## Dubbo + Istio
 
-Dubbo 应用不再依赖 Envoy 作为 sidecar ，而是直接和 Istio 进行交互，把 Istio 作为注册中心，作为服务治理的配置中心。Dubbo 需要提供类似的 xDS 协议，在 Pilot 将 Service 的 instance 转换成 Dubbo 的协议格式。Dubbo 还需要去适配 Istio 的一些功能，如健康检查，安全相关的逻辑。具体实现可以参考 Envoy 的实现。
+Dubbo 应用不再依赖 Envoy 作为 sidecar，而是直接和 Istio 进行交互，把 Istio 作为注册中心，作为服务治理的配置中心。Dubbo 需要提供类似的 xDS 协议，在 Pilot 将 Service 的 instance 转换成 Dubbo 的协议格式。Dubbo 还需要去适配 Istio 的一些功能，如健康检查，安全相关的逻辑。具体实现可以参考 Envoy 的实现。
 
 ![Dubbo + Istio](https://s2.ax1x.com/2019/12/08/Qa1qQU.png)
 
