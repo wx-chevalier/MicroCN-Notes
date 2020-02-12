@@ -4,7 +4,7 @@
 
 # 服务治理
 
-Dubbo 原有体系里的服务治理是强依赖于 IP，当配置了一套服务治理规则的时候，最后都是基于一个或多个 IP 地址。到 Kubernetes 体系下之后，要考虑的是 Pod 的 IP 不是固定的。所以当前的路由规则不能满足条件，而且会产生很多规则垃圾数据。Kubernetes 体系下，通过 Service 查找 Pod，是基于 label selector ；通过 deployment 管理 Pod，其实也是基于 Pod label selector 。所以 Pod label selector 是在 Kubernetes 习题中比较通用的解决方案。
+Dubbo 原有体系里的服务治理是强依赖于 IP，当配置了一套服务治理规则的时候，最后都是基于一个或多个 IP 地址。到 Kubernetes 体系下之后，要考虑的是 Pod 的 IP 不是固定的。所以当前的路由规则不能满足条件，而且会产生很多规则垃圾数据。Kubernetes 体系下，通过 Service 查找 Pod，是基于 label selector ；通过 deployment 管理 Pod，其实也是基于 Pod label selector。所以 Pod label selector 是在 Kubernetes 习题中比较通用的解决方案。
 
 以路由规则为例，需要支持一种新的路由规则：label 路由。通过一定条件匹配之后，将结果定位到以 label selector 查询到的 Pod 列表里，而非原来的 IP 列表。应用获取当前 Pod 的信息方式：
 
