@@ -4,7 +4,7 @@
 
 # 服务治理
 
-Dubbo 原有体系里的服务治理是强依赖于 IP，当配置了一套服务治理规则的时候，最后都是基于一个或多个 IP 地址。到 Kubernetes 体系下之后，要考虑的是 Pod 的 IP 不是固定的。所以当前的路由规则不能满足条件，而且会产生很多规则垃圾数据。Kubernetes 体系下，通过 Service 查找 Pod，是基于 label selector ；通过 deployment 管理 Pod，其实也是基于 Pod label selector。所以 Pod label selector 是在 Kubernetes 习题中比较通用的解决方案。
+Dubbo 原有体系里的服务治理是强依赖于 IP，当配置了一套服务治理规则的时候，最后都是基于一个或多个 IP 地址。到 Kubernetes 体系下之后，要考虑的是 Pod 的 IP 不是固定的。所以当前的路由规则不能满足条件，而且会产生很多规则垃圾数据。Kubernetes 体系下，通过 Service 查找 Pod，是基于 label selector；通过 deployment 管理 Pod，其实也是基于 Pod label selector。所以 Pod label selector 是在 Kubernetes 习题中比较通用的解决方案。
 
 以路由规则为例，需要支持一种新的路由规则：label 路由。通过一定条件匹配之后，将结果定位到以 label selector 查询到的 Pod 列表里，而非原来的 IP 列表。应用获取当前 Pod 的信息方式：
 
@@ -26,11 +26,11 @@ Kubernetes 体系下，RPC 服务发现有几种方式：
 
 - 注册机制：将 IP 写入注册中心，用心跳保持连接；当心跳停止，从注册中心删除。
 
-- 利用 Service + DNS ：新建一个 Service，可以通过标签选择到一组 pod 列表，这个 Service 对应一个不变的集群 IP；Client 端通过 DNS 方式或者直接访问集群 IP。这个集群 IP，约等于实现了负载均衡（iptable 方式）。
+- 利用 Service + DNS：新建一个 Service，可以通过标签选择到一组 pod 列表，这个 Service 对应一个不变的集群 IP；Client 端通过 DNS 方式或者直接访问集群 IP。这个集群 IP，约等于实现了负载均衡（iptable 方式）。
 
 - 利用 Headless Service（DNS）：Headless Service 和上面的 Service 的区别是，它不提供集群 IP，通过主机名的形式获取一组 IP 列表，Client 端自己决定访问哪个 Pod。
 
-- API Server ：Client 端直接请求 API Server，获取到 Pod 的列表，Client 自己决定访问 Pod 的逻辑。同时获取的时候增加 watch，API Server 会将 Pod 的变化信息同步 Client。
+- API Server：Client 端直接请求 API Server，获取到 Pod 的列表，Client 自己决定访问 Pod 的逻辑。同时获取的时候增加 watch，API Server 会将 Pod 的变化信息同步 Client。
 
 通过拿到 Server 端的 IP 或者 host，Client 端就可以发起 http 或者其他协议的请求。
 
