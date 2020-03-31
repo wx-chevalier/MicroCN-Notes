@@ -4,9 +4,9 @@ gRPC 是由 Google 开源的 Bi-directional Streaming RPC 框架，其内置了�
 
 ![gRPC allows for asynchronous language-agnostic message passing via Protocol Buffers.](https://s1.ax1x.com/2020/03/29/GZsOpD.png)
 
-在一般的 RPC 机制中，客户端启动与服务器的连接，只有客户端可以请求，而服务器只能响应传入的请求。 但是，在双向 gRPC 流中，尽管初始连接是由客户端（称为端点 1）发起的，但是一旦建立连接，服务器（称为端点 2）和端点 1 都可以发送请求和接收响应 。 这极大地简化了两个端点之间相互通信（例如网格计算）的开发。 由于两个流都是独立的，因此也省去了在端点之间创建两个独立连接的麻烦（一个从端点 1 到端点 2，另一个从端点 2 到端点 1）。gRPC 使用标头压缩在单个连接上多路复用请求。 这使得 gRPC 可以用于电池寿命和数据使用很重要的移动客户端。 核心库使用 C 语言（Java 和 Go 除外），并且通过该库连接的所有其他语言都实现了表面 API（Google，n.d。）。
+在一般的 RPC 机制中，客户端启动与服务器的连接，只有客户端可以请求，而服务器只能响应传入的请求。但是，在双向 gRPC 流中，尽管初始连接是由客户端（称为端点 1）发起的，但是一旦建立连接，服务器（称为端点 2）和端点 1 都可以发送请求和接收响应 。这极大地简化了两个端点之间相互通信（例如网格计算）的开发。由于两个流都是独立的，因此也省去了在端点之间创建两个独立连接的麻烦（一个从端点 1 到端点 2，另一个从端点 2 到端点 1）。gRPC 使用标头压缩在单个连接上多路复用请求。这使得 gRPC 可以用于电池寿命和数据使用很重要的移动客户端。核心库使用 C 语言（Java 和 Go 除外），并且通过该库连接的所有其他语言都实现了表面 API（Google，n.d。）。
 
-由于 Protocol Buffers 已被许多个人和公司使用，因此 gRPC 使其自然可以通过 gRPC 扩展其 RPC 生态系统。 像 Cisco，Juniper 和 Netflix 等公司发现采用它很实用。大部分 Google Public API（例如其地标和地图 API）也已移植到 gRPC ProtoBuf。
+由于 Protocol Buffers 已被许多个人和公司使用，因此 gRPC 使其自然可以通过 gRPC 扩展其 RPC 生态系统。像 Cisco，Juniper 和 Netflix 等公司发现采用它很实用。大部分 Google Public API（例如其地标和地图 API）也已移植到 gRPC ProtoBuf。
 
 # HTTP/2
 
