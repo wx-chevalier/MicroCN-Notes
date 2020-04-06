@@ -18,6 +18,8 @@
       
     - [服务调用](/RPC/服务调用/README.md)
       
+    - [消息传递](/RPC/消息传递/README.md)
+      - [数据流的类型](/RPC/消息传递/数据流的类型.md)
   - RPC 框架
     - [Dubbo](/RPC%20框架/Dubbo/README.md)
       - [Kubernetes](/RPC%20框架/Dubbo/Kubernetes/README.md)
@@ -121,8 +123,6 @@
           - [注册与发现流程](/架构衍化/微服务/服务编排/服务编排/注册与发现流程.md)
         - [服务编排的挑战](/架构衍化/微服务/服务编排/服务编排的挑战.md)
       - [服务视图与 SOA](/架构衍化/微服务/服务视图与%20SOA.md)
-    - 数据流
-      - [数据流的类型](/架构衍化/数据流/数据流的类型.md)
   - [配置中心](/配置中心/README.md)
     - [Consul](/配置中心/Consul/README.md)
       
