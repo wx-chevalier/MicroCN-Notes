@@ -14,6 +14,7 @@
         - [类型定义](/RPC/协议编码/Protobuf/类型定义.md)
       - [Thrift](/RPC/协议编码/Thrift/README.md)
         
+    - [性能对比](/RPC/性能对比.md)
     - [服务发现](/RPC/服务发现/README.md)
       
     - [服务调用](/RPC/服务调用/README.md)
