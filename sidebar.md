@@ -67,8 +67,6 @@
   - [接入网关](/接入网关/README.md)
     - Kong
       - [Kong](/接入网关/Kong/Kong.md)
-    - [中间件](/接入网关/中间件/README.md)
-      
     - [代理服务器](/接入网关/代理服务器/README.md)
       - [Apache](/接入网关/代理服务器/Apache/README.md)
         
@@ -77,13 +75,14 @@
       - [Nginx](/接入网关/代理服务器/Nginx/README.md)
         - [HTTP 服务器配置](/接入网关/代理服务器/Nginx/HTTP%20服务器配置.md)
         - [基础配置](/接入网关/代理服务器/Nginx/基础配置.md)
-        - [进程与处理模型](/接入网关/代理服务器/Nginx/进程与处理模型.md)
+        - [进程模型](/接入网关/代理服务器/Nginx/进程模型.md)
       - [OpenResty](/接入网关/代理服务器/OpenResty/README.md)
         
     - [服务状态处理](/接入网关/服务状态处理/README.md)
       - [幂等设计](/接入网关/服务状态处理/幂等设计.md)
       - [无状态设计](/接入网关/服务状态处理/无状态设计.md)
-    - [网关特性](/接入网关/网关特性.md)
+    - [系统设计](/接入网关/系统设计/README.md)
+      - [网关特性](/接入网关/系统设计/网关特性.md)
     - [负载均衡](/接入网关/负载均衡/README.md)
       - [LVS](/接入网关/负载均衡/LVS/README.md)
         
@@ -116,6 +115,8 @@
     - [SOA](/架构衍化/SOA/README.md)
       - [ESB](/架构衍化/SOA/ESB.md)
       - [服务视图](/架构衍化/SOA/服务视图.md)
+    - [中间件](/架构衍化/中间件/README.md)
+      
     - [云原生](/架构衍化/云原生/README.md)
       - [Distributionless](/架构衍化/云原生/Distributionless.md)
       - [Serverless](/架构衍化/云原生/Serverless.md)

@@ -2,7 +2,7 @@
 
 # 环境部署
 
-```
+```s
 # CentOS
 yum install nginx;
 # Ubuntu
@@ -396,7 +396,7 @@ logcation 的几个使用实例：
 
 2)location =/ {}：仅仅匹配/
 
-3)location ~\\\\\\\\\\* \.(gif|jpg|jpeg)\$
+3)location ~\\\\\\\\\\\* \.(gif|jpg|jpeg)\$
 
      ｛
 
