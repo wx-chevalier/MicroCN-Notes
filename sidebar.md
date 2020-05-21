@@ -63,6 +63,9 @@
       
     - [流量控制](/弹性服务/流量控制/README.md)
       - [Guava RateLimiter](/弹性服务/流量控制/Guava%20RateLimiter.md)
+      - [Sentinel](/弹性服务/流量控制/Sentinel/README.md)
+        - [架构实现](/弹性服务/流量控制/Sentinel/架构实现.md)
+        - [部署配置](/弹性服务/流量控制/Sentinel/部署配置.md)
       - [限流算法](/弹性服务/流量控制/限流算法.md)
   - [接入网关](/接入网关/README.md)
     - Kong
@@ -101,6 +104,10 @@
       - [CAS](/权限隔离/SSO/CAS/README.md)
         
       - [Keycloak](/权限隔离/SSO/Keycloak/README.md)
+        
+      - [Pac4j](/权限隔离/SSO/Pac4j/README.md)
+        
+      - [Shiro](/权限隔离/SSO/Shiro/README.md)
         
     - [多租户](/权限隔离/多租户/README.md)
       - [通用多租户框架](/权限隔离/多租户/通用多租户框架.md)
