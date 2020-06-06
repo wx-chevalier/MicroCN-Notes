@@ -63,6 +63,7 @@
       
     - [流量控制](/弹性服务/流量控制/README.md)
       - [Guava RateLimiter](/弹性服务/流量控制/Guava%20RateLimiter.md)
+      - [Redis Lua 限流](/弹性服务/流量控制/Redis%20Lua%20限流.md)
       - [Sentinel](/弹性服务/流量控制/Sentinel/README.md)
         - [架构实现](/弹性服务/流量控制/Sentinel/架构实现.md)
         - [部署配置](/弹性服务/流量控制/Sentinel/部署配置.md)
