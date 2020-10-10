@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Mocha Tests",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "-u",
+                "bdd",
+                "--timeout",
+                "999999",
+                "--colors",
+                "${workspaceFolder}/test/**/*.test.js"
+            ],
+            "env": {
+                "NODE_ENV": "test"
+            },
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std" // https://github.com/Microsoft/vscode/issues/34702#issuecomment-331237388
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch vote-bot web",
+            "program": "${workspaceFolder}/services/nodevoto-web/voteBot.js",
+            "env": {
+                "WEB_HOST": "localhost:8080",
+            },
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std" // https://github.com/Microsoft/vscode/issues/34702#issuecomment-331237388
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch nodevoto web",
+            "program": "${workspaceFolder}/services/nodevoto-web/server.js",
+            "env": {
+                "WEB_PORT": "8080",
+                //"WEBPACK_DEV_SERVER": "http://localhost:8083", // enable for active webapp dev
+                "VOTINGSVC_HOST": "localhost:8081",
+                "GIFSVC_HOST": "localhost:8082",
+                //"INDEX_BUNDLE": "services/nodevoto-web/webapp/dist/index_bundle.js"
+            },
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std" // https://github.com/Microsoft/vscode/issues/34702#issuecomment-331237388
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch nodevoto voting",
+            "program": "${workspaceFolder}/services/nodevoto-voting/server.js",
+            "env": {
+                "GRPC_PORT": "8081"
+            },
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std" // https://github.com/Microsoft/vscode/issues/34702#issuecomment-331237388
+
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch nodevoto emoji",
+            "program": "${workspaceFolder}/services/nodevoto-emoji/server.js",
+            "env": {
+                "GRPC_PORT": "8082"
+            },
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std" // https://github.com/Microsoft/vscode/issues/34702#issuecomment-331237388
+
+        }
+    ]
+}

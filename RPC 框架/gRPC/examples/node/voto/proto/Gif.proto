@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package nodevoto.v1;
+
+message Gif {
+    string url = 1;
+    string shortcode = 2;
+}
+
+message ListAllGifRequest {
+}
+
+message ListAllGifResponse {
+    repeated Gif list = 1;
+}
+
+message FindByShortcodeRequest {
+    string Shortcode =1;
+}
+
+message FindByShortcodeResponse {
+    Gif Gif = 1;
+}
+
+service GifService {
+    rpc ListAll (ListAllGifRequest) returns (ListAllGifResponse);
+    rpc FindByShortcode (FindByShortcodeRequest) returns (FindByShortcodeResponse);
+}

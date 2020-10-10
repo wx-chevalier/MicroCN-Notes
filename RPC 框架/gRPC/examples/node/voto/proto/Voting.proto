@@ -1,0 +1,120 @@
+syntax = "proto3";
+
+package nodevoto.v1;
+
+message VotingResult {
+    string Shortcode = 1;
+    int32 Votes = 2;
+}
+
+message VoteRequest {
+}
+
+message VoteResponse {
+}
+
+message ResultsRequest {
+}
+
+message ResultsResponse {
+    repeated VotingResult results = 1;
+}
+
+service VotingService {
+    rpc Vote1987TheChipmunkAdventure (VoteRequest) returns (VoteResponse);
+    rpc Vote30s1934SillySymphonies (VoteRequest) returns (VoteResponse);
+    rpc Vote80sCartoonsSheRa (VoteRequest) returns (VoteResponse);
+    rpc Vote80sCerealStrawberryShortcake (VoteRequest) returns (VoteResponse);
+    rpc Vote90sCommercials (VoteRequest) returns (VoteResponse);
+    rpc Vote90sNickelodeonRugrats (VoteRequest) returns (VoteResponse);
+    rpc VoteAdventureTimeAdviceJakeTheDog (VoteRequest) returns (VoteResponse);
+    rpc VoteAdventureTimeEatingJakeTheDog (VoteRequest) returns (VoteResponse);
+    rpc VoteAngryComputerSpongebobSquarepants (VoteRequest) returns (VoteResponse);
+    rpc VoteAnimatedTrippyPsychedelic (VoteRequest) returns (VoteResponse);
+    rpc VoteAnimatedVintageComics (VoteRequest) returns (VoteResponse);
+    rpc VoteAnimationLoveDisney (VoteRequest) returns (VoteResponse);
+    rpc VoteAnimationReactionDelete (VoteRequest) returns (VoteResponse);
+    rpc VoteArtIllustration (VoteRequest) returns (VoteResponse);
+    rpc VoteBatmanSadRain (VoteRequest) returns (VoteResponse);
+    rpc VoteBlackAndWhiteCuteChristmas (VoteRequest) returns (VoteResponse);
+    rpc VoteCandleKwanzaaProudFamily (VoteRequest) returns (VoteResponse);
+    rpc VoteCartoonHalloweenGhost (VoteRequest) returns (VoteResponse);
+    rpc VoteCartoonRugrats (VoteRequest) returns (VoteResponse);
+    rpc VoteCat (VoteRequest) returns (VoteResponse);
+    rpc VoteCatHamiltonHipstercat (VoteRequest) returns (VoteResponse);
+    rpc VoteCatTrippySpace (VoteRequest) returns (VoteResponse);
+    rpc VoteCatsPhotosThechive (VoteRequest) returns (VoteResponse);
+    rpc VoteChallengerBobsBurgersLouiseBelcher (VoteRequest) returns (VoteResponse);
+    rpc VoteCharlieBrownCrosspost (VoteRequest) returns (VoteResponse);
+    rpc VoteChristmasCuteCartoon (VoteRequest) returns (VoteResponse);
+    rpc VoteChristmasSnow (VoteRequest) returns (VoteResponse);
+    rpc VoteConfusedAliceInWonderlandDisney (VoteRequest) returns (VoteResponse);
+    rpc VoteConfusedSurprisedAliceInWonderland (VoteRequest) returns (VoteResponse);
+    rpc VoteCookieMonsterAtari2600 (VoteRequest) returns (VoteResponse);
+    rpc VoteCuteNaruto (VoteRequest) returns (VoteResponse);
+    rpc VoteDanceFeelingIt (VoteRequest) returns (VoteResponse);
+    rpc VoteDancingTheSimpsonsSmithers (VoteRequest) returns (VoteResponse);
+    rpc VoteDisneyPuppyPuppiesNationalDay (VoteRequest) returns (VoteResponse);
+    rpc VoteDisneyTheJungleBookMowgliBaloo (VoteRequest) returns (VoteResponse);
+    rpc VoteDisneypixarDisneyPixar (VoteRequest) returns (VoteResponse);
+    rpc VoteDisneyzootopia (VoteRequest) returns (VoteResponse);
+    rpc VoteDudebropartymassacre35sf (VoteRequest) returns (VoteResponse);
+    rpc VoteEmperorsNewGroove (VoteRequest) returns (VoteResponse);
+    rpc VoteEyes (VoteRequest) returns (VoteResponse);
+    rpc VoteFilmeditComingToAmericaMovieedit (VoteRequest) returns (VoteResponse);
+    rpc VoteFindingdoryFindingDoryNemo (VoteRequest) returns (VoteResponse);
+    rpc VoteFlowersPastelPale (VoteRequest) returns (VoteResponse);
+    rpc VoteFoodHungryAdventureTime (VoteRequest) returns (VoteResponse);
+    rpc VoteForumsSpringHummingbird (VoteRequest) returns (VoteResponse);
+    rpc VoteFullHouseMichelleTannerMaryKateOlsen (VoteRequest) returns (VoteResponse);
+    rpc VoteFunnyCute (VoteRequest) returns (VoteResponse);
+    rpc VoteGifnewstestArtistsOnTumblrCsabaKlement (VoteRequest) returns (VoteResponse);
+    rpc VoteGiphycam (VoteRequest) returns (VoteResponse);
+    rpc VoteGrossPocahontasRaccoon (VoteRequest) returns (VoteResponse);
+    rpc VoteHairFlipWhateverHeyArnold (VoteRequest) returns (VoteResponse);
+    rpc VoteHappyApplause (VoteRequest) returns (VoteResponse);
+    rpc VoteHappySpongebobSquarepants (VoteRequest) returns (VoteResponse);
+    rpc VoteHaydiroketPixelCheeseburgerAnimated (VoteRequest) returns (VoteResponse);
+    rpc VoteHugAdventureTimeFeelBetter (VoteRequest) returns (VoteResponse);
+    rpc VoteInternetWin (VoteRequest) returns (VoteResponse);
+    rpc VoteJasonclarkeLoopYoloArt (VoteRequest) returns (VoteResponse);
+    rpc VoteKimKardashian (VoteRequest) returns (VoteResponse);
+    rpc VoteKylestropeAnimationIllustrationKyleStrope (VoteRequest) returns (VoteResponse);
+    rpc VoteLoveOhThese (VoteRequest) returns (VoteResponse);
+    rpc VoteLoveStupidFinn (VoteRequest) returns (VoteResponse);
+    rpc VoteMashUpBeyonce (VoteRequest) returns (VoteResponse);
+    rpc VoteMinionsIlluminationTrailer2 (VoteRequest) returns (VoteResponse);
+    rpc VoteMonsterArenaProject (VoteRequest) returns (VoteResponse);
+    rpc VoteMovieFilmAnimation (VoteRequest) returns (VoteResponse);
+    rpc VoteMyLittlePonyMlpG1 (VoteRequest) returns (VoteResponse);
+    rpc VoteNewGirlMyLittlePonyUni (VoteRequest) returns (VoteResponse);
+    rpc VoteOkkultmotionpicturesAnimationChristmasOpenKnowledge (VoteRequest) returns (VoteResponse);
+    rpc VotePokemonHighFive (VoteRequest) returns (VoteResponse);
+    rpc VotePoldarkSpoilers (VoteRequest) returns (VoteResponse);
+    rpc VoteRabbitBoredSigh (VoteRequest) returns (VoteResponse);
+    rpc VoteReaction90s (VoteRequest) returns (VoteResponse);
+    rpc VoteReplyNeandaWatchesFreshPrecureAskoutcasts (VoteRequest) returns (VoteResponse);
+    rpc VoteRihannaVsVictoriasSecret (VoteRequest) returns (VoteResponse);
+    rpc VoteSadCryingTears (VoteRequest) returns (VoteResponse);
+    rpc VoteSesameStreetSoniaSotomayor (VoteRequest) returns (VoteResponse);
+    rpc VoteSleepyWhileAlso (VoteRequest) returns (VoteResponse);
+    rpc VoteSnowWinterChristmas (VoteRequest) returns (VoteResponse);
+    rpc VoteSouthParkCuteSmile (VoteRequest) returns (VoteResponse);
+    rpc VoteSteveCarrellLeslieMannThe40YearOldVirgin (VoteRequest) returns (VoteResponse);
+    rpc VoteSxsw2016BarksAndBaristas (VoteRequest) returns (VoteResponse);
+    rpc VoteTelevisionFuturama (VoteRequest) returns (VoteResponse);
+    rpc VoteTheSimpsonsMrBurns (VoteRequest) returns (VoteResponse);
+    rpc VoteTheSimpsonsTiredHomerSimpson (VoteRequest) returns (VoteResponse);
+    rpc VoteThengbBabyNgbThe (VoteRequest) returns (VoteResponse);
+    rpc VoteThumbsUpDaftPunkNrb (VoteRequest) returns (VoteResponse);
+    rpc VoteTiredSleepingTheSimpsons (VoteRequest) returns (VoteResponse);
+    rpc VoteValentinesValentinesDayValentineNicoletteGroome (VoteRequest) returns (VoteResponse);
+    rpc VoteWarnerarchiveHannaBarberaFlintstonesAFlintstoneChristmas (VoteRequest) returns (VoteResponse);
+    rpc VoteWarnerarchiveJusticeLeagueUnlimited (VoteRequest) returns (VoteResponse);
+    rpc VoteWillReasonsFine (VoteRequest) returns (VoteResponse);
+    rpc VoteWillViaAvailable (VoteRequest) returns (VoteResponse);
+    rpc VoteWizardOfOzTheWizLive (VoteRequest) returns (VoteResponse);
+    rpc VoteZaynMalikNaughtyBoy (VoteRequest) returns (VoteResponse);
+    rpc VoteZooeyDeschanelNewGirlMy2 (VoteRequest) returns (VoteResponse);
+    rpc Results (ResultsRequest) returns (ResultsResponse);
+}

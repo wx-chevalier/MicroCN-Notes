@@ -1,0 +1,88 @@
+swagger: "2.0"
+info:
+  description: "Node.js implementation of emojivoto with gifs instead of emojis"
+  version: "1.0.0"
+  title: "nodevoto"
+  termsOfService: ""
+  contact:
+    email: "sebastiantiedtke@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+basePath: "/api"
+schemes:
+- "http"
+paths:
+  /leaderboard:
+    get:
+      tags:
+      - "nodevoto"
+      summary: Get leaderboard
+      description: Returns list of gif in descending order.
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: Ordered list of gif
+          schema:
+            type: array
+            items:
+              required:
+                - shortcode
+                - url
+                - votes
+              properties:
+                shortcode:
+                  type: string
+                url:
+                  type: string
+                votes:
+                  type: integer 
+  /vote:
+    get:
+      tags:
+      - "nodevoto"
+      summary: "Cast vote for specific gif"
+      description: "Cast vote for gif based on choice parameter provided"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "choice"
+        in: "query"
+        description: "Shortcode of specific gif to cast vote for"
+        required: true
+        type: "string"
+        enum: [":1987-the-chipmunk-adventure-SnxJmrMxTFlle:",":30s-1934-silly-symphonies-PRI5giiYFS3W8:",":80s-cartoons-she-ra-it8307a0XxlVS:",":80s-cereal-strawberry-shortcake-sgXZwQrefu6J2:",":90s-commercials-11o3buMsBCQsPm:",":90s-nickelodeon-rugrats-144b158M2GhmV2:",":adventure-time-advice-jake-the-dog-vSr0Lgose4rhS:",":adventure-time-eating-jake-the-dog-KiQTBiI77Dpy8:",":angry-computer-spongebob-squarepants-XIS4ARkxVah4A:",":animated-trippy-psychedelic-dlwB35ZltpqXC:",":animated-vintage-comics-cg87kkTQZvCGA:",":animation-love-disney-e51lcDmXXeLPa:",":animation-reaction-delete-8bTmYiGgMGias:",":art-illustration-6LdOAmYhcOEOQ:",":batman-sad-rain-rR29jBsTB3lZe:",":black-and-white-cute-christmas-jdjGqxdRJx44g:",":candle-kwanzaa-proud-family-3rgXBChdAGE0WF3MRO:",":cartoon-halloween-ghost-aTf4PONtSYB1e:",":cartoon-rugrats-5UeRwJmIiUuYw:",":cat-j1QQj6To9Pbxu:",":cat-hamilton-hipstercat-3xz2BHFXxvFDYwnA9W:",":cat-trippy-space-GyJ8p0Um850ic:",":cats-photos-thechive-11bV8o4fJ3vpOE:",":challenger-bobs-burgers-louise-belcher-dfIQG68floQuY:",":charlie-brown-crosspost-xWcTtMwGlD8Bi:",":christmas-cute-cartoon-e9dIewetYdQZO:",":christmas-snow-hhE34K46p8i4M:",":confused-alice-in-wonderland-disney-x8gioMGGfpykU:",":confused-surprised-alice-in-wonderland-XWEL9AQ529wKA:",":cookie-monster-atari-2600-lMcMve6tL1AM8:",":cute-naruto-psKReJOWm4cfK:",":dance-feeling-it-ZaOWGY4zFrXYQ:",":dancing-the-simpsons-smithers-6VKrjh04YGhOM:",":disney-puppy-puppies-national-day-UTuy9luZStALS:",":disney-the-jungle-book-mowgli-baloo-WfMTAZcqJjCc8:",":disneypixar-disney-pixar-dIjGxPOeIAvHW:",":disneyzootopia-xT9DPxggC8w6kCWVY4:",":dudebropartymassacre3-5sf-R84T38nfZgoLe:",":emperors-new-groove-eU8dlmCwQXtja:",":eyes-uXYmFBpG4INEI:",":filmedit-coming-to-america-movieedit-jHPwSl9PMGZB6:",":findingdory-finding-dory-nemo-3o6ozgge4UJklqLgIg:",":flowers-pastel-pale-6kqtoA6DHgHLy:",":food-hungry-adventure-time-I6sFcn3VXL1Uk:",":forums-spring-hummingbird-EGauSkKQZuXxS:",":full-house-michelle-tanner-mary-kate-olsen-12ZQVkkbvvM3vy:",":funny-cute-OJkSloXZvxuDe:",":gifnewstest-artists-on-tumblr-csaba-klement-xITOFYCXsbQM8:",":giphycam-LEttrVn3fFH7q:",":gross-pocahontas-raccoon-3oEdvc4JCV2HJa7UQ0:",":hair-flip-whatever-hey-arnold-m8QWzr7YNO2rK:",":happy-applause-CkE3ge4PJofcI:",":happy-spongebob-squarepants-uL3sow5gYurao:",":haydiroket-pixel-cheeseburger-animated-nIJca2o6axtMk:",":hug-adventure-time-feel-better-VogNJM2e5i4Pm:",":internet-win-Qn7IK0NSb1BCg:",":jasonclarke-loop-yolo-art-13JAvS2OyKJDry:",":kim-kardashian-qeHYeRn87wJj2:",":kylestrope-animation-illustration-kyle-strope-10M8Yr4WKJK63e:",":love-oh-these-ucV80fdRMixZC:",":love-stupid-finn-CdLyDurMXXN2E:",":mash-up-beyonce-JQqUUhTbAVsxW:",":minions-illumination-trailer-2-Nn73VXklzXEpq:",":monster-arena-project-q7dp7xY7sHGCs:",":movie-film-animation-pcPs6v6fhE7Ru:",":my-little-pony-mlp-g1-2zck3lIkKD15u:",":new-girl-my-little-pony-uni-qd4SuHfwtooGA:",":okkultmotionpictures-animation-christmas-open-knowledge-Z0rwIBc5oI1RC:",":pokemon-high-five-gQ8qWas3GxlPq:",":poldark-spoilers-yq1YQCQoaEny8:",":rabbit-bored-sigh-O9IvntBQsqSB2:",":reaction-90s-fpzYhFGJZ9xPW:",":reply-neanda-watches-fresh-precure-askoutcasts-cIScSqNCXbSyk:",":rihanna-vs-victorias-secret-l0O9zAv2JAijohgru:",":sad-crying-tears-G7vf3lJP0oeK4:",":sesame-street-sonia-sotomayor-3r1PtiMB199zW:",":sleepy-while-also-6NRH8IXqSNgL6:",":snow-winter-christmas-dUWHOAKFSNtdK:",":south-park-cute-smile-Z6m2HqMOpSaxW:",":steve-carrell-leslie-mann-the-40-year-old-virgin-3oEdv9YYw5fNl4RIaI:",":sxsw-2016-barks-and-baristas-l2JJts44KFYyMez6M:",":television-futurama-Fexvhiy38lijC:",":the-simpsons-mr-burns-mSmF4o8LT36ec:",":the-simpsons-tired-homer-simpson-29psbxDByiFlm:",":thengb-baby-ngb-the-7uHeCjfeMPkZ2:",":thumbs-up-daft-punk-nrb-RpVZL0sy3vrri:",":tired-sleeping-the-simpsons-YgWttApA5Uk9O:",":valentines-valentines-day-valentine-nicolette-groome-yoJC2ztxk09qjRkY36:",":warnerarchive-hanna-barbera-flintstones-a-flintstone-christmas-d2YTUFW4o8UiQoSc:",":warnerarchive-justice-league-unlimited-3o6UBonPo5FhstgLfi:",":will-reasons-fine-V4X14bU1vlHfa:",":will-via-available-TRl4eNrNjDuXC:",":wizard-of-oz-the-wiz-live-hZTauiFiq2q4g:",":zayn-malik-naughty-boy-tUQqF6Ct1u7EQ:",":zooey-deschanel-new-girl-my-2-10cGA3fc2z12r6:"]
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "object"
+        400:
+          description: "Choosen gif shortcode doesnt exist"
+        500:
+          description: "Unknown Error"
+  /list:
+    get:
+      tags:
+      - "nodevoto"
+      summary: "Fetch all gif supported"
+      description: "Returns list of all gif supported on the ballot"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: array
+            items:
+              required:
+                - url
+                - shortcode
+              properties:
+                url:
+                  type: string
+                shortcode:
+                  type: string
+        500:
+          description: "Unknown Error"
