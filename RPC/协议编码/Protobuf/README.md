@@ -46,6 +46,6 @@ $ protoc --version
 
 ## 代码编译
 
-# 链接
+# TBD
 
 - https://colobu.com/2019/10/03/protobuf-ultimate-tutorial-in-go/#%E5%8E%86%E5%8F%B2

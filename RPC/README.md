@@ -60,7 +60,7 @@ RPC(Remote Procedure Call)，远程过程调用，从最简单最抽象的模式
 
 一般来说，开发者只需要关注蓝色( functions )部分，而至于红色部分( stub 句柄 ) 和黄色部分(socket 网络)部分呢，框架层面会把它解决掉。蓝色部分，服务端开发者要做的事情就是定义某个接口，客户端开发者要做的事情就是调用某个接口，一切开发模式都跟本地调用无差别。
 
-# 链接
+# TBD
 
 - https://mp.weixin.qq.com/s/ap0-STJvnAvu3gGyfDgp5A
 - https://cn.doc.rpcx.io

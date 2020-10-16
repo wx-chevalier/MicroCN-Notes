@@ -24,6 +24,6 @@ JSON Schema 用以标注和验证 JSON 文档的元数据的文档，可以类�
 
 - [`type`](http://json-schema.org/latest/json-schema-validation.html#rfc.section.6.1.1) 关键字定义了对我们的 JSON 数据的第一个约束，在这种情况下，它必须是 JSON 对象。
 
-# 链接
+# TBD
 
 - http://json-schema.org/learn/getting-started-step-by-step.html

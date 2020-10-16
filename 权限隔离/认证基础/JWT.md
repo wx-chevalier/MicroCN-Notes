@@ -74,7 +74,7 @@ const token = jwt.sign({ foo: "bar" }, cert, { algorithm: "RS256" });
 jwt.sign(
   {
     exp: Math.floor(Date.now() / 1000) + 60 * 60,
-    data: "foobar"
+    data: "foobar",
   },
   "secret"
 );
@@ -96,11 +96,11 @@ const decoded = jwt.verify(token, "shhhhh");
 console.log(decoded.foo); // bar
 
 // 异步校验是否有效
-jwt.verify(token, "shhhhh", function(err, decoded) {
+jwt.verify(token, "shhhhh", function (err, decoded) {
   console.log(decoded.foo); // bar
 });
 ```
 
-# 链接
+# TBD
 
 - https://mp.weixin.qq.com/s/j-Ap_30PO8bSFUY3Q_RHcg

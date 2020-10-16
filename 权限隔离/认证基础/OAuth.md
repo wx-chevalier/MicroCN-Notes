@@ -64,7 +64,7 @@ https://oauth.b.com/token?
 
 上面 URL 中，grant_type 参数等于 client_credentials 表示采用凭证式，client_id 和 client_secret 用来让 B 确认 A 的身份。第二步，B 网站验证通过以后，直接返回令牌。这种方式给出的令牌，是针对第三方应用的，而不是针对用户的，即有可能多个用户共享同一个令牌。
 
-# 链接
+# TBD
 
 - http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html
 

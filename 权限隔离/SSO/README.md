@@ -16,7 +16,7 @@
 | Add metadata from URL                  | **no**                                                                  |                                                                       |                                                    |                                                                                   |                                                                            | yes                                                                            |
 | Installation                           | easy                                                                    |                                                                       |                                                    |                                                                                   |                                                                            | **difficult**                                                                  |
 
-# 链接
+# TBD
 
 - https://studygolang.com/articles/11794
 - https://github.com/samitpal/simple-sso

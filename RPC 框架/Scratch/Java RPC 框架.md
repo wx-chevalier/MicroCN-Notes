@@ -1,5 +1,5 @@
 # Java RPC 框架
 
-# 链接
+# TBD
 
 - https://mp.weixin.qq.com/s/nLSjDVluMSQCUOaFkkhjsw RPC 服务治理框架实战
