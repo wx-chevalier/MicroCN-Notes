@@ -76,21 +76,6 @@
       
     - 导论
       - [ServiceMesh 产品对比](/ServiceMesh/导论/ServiceMesh%20产品对比.md)
-  - [弹性服务](/弹性服务/README.md)
-    - [定时任务](/弹性服务/定时任务/README.md)
-      - [Crontab](/弹性服务/定时任务/Crontab.md)
-      - [Hashed Wheel Timer](/弹性服务/定时任务/Hashed%20Wheel%20Timer.md)
-    - [峰值应对](/弹性服务/峰值应对/README.md)
-      - [秒杀峰值](/弹性服务/峰值应对/秒杀峰值.md)
-    - [服务容错](/弹性服务/服务容错/README.md)
-      
-    - [流量控制](/弹性服务/流量控制/README.md)
-      - [Guava RateLimiter](/弹性服务/流量控制/Guava%20RateLimiter.md)
-      - [Redis Lua 限流](/弹性服务/流量控制/Redis%20Lua%20限流.md)
-      - [Sentinel](/弹性服务/流量控制/Sentinel/README.md)
-        - [架构实现](/弹性服务/流量控制/Sentinel/架构实现.md)
-        - [部署配置](/弹性服务/流量控制/Sentinel/部署配置.md)
-      - [限流算法](/弹性服务/流量控制/限流算法.md)
   - [接入网关](/接入网关/README.md)
     - Kong
       - [Kong](/接入网关/Kong/Kong.md)
@@ -121,6 +106,20 @@
       - DeepStream
         - [DeepStream](/接入网关/连接服务/DeepStream/DeepStream.md)
       - [多机房多网络](/接入网关/连接服务/多机房多网络.md)
+  - [服务化架构衍化](/服务化架构衍化/README.md)
+    - [SOA](/服务化架构衍化/SOA/README.md)
+      - [ESB](/服务化架构衍化/SOA/ESB.md)
+      - [服务视图](/服务化架构衍化/SOA/服务视图.md)
+    - [云原生](/服务化架构衍化/云原生/README.md)
+      - [Distributionless](/服务化架构衍化/云原生/Distributionless.md)
+      - [Serverless](/服务化架构衍化/云原生/Serverless.md)
+    - [分布式应用的需求](/服务化架构衍化/分布式应用的需求.md)
+    - [单体架构](/服务化架构衍化/单体架构/README.md)
+      - [单体分层架构](/服务化架构衍化/单体架构/单体分层架构.md)
+    - [微服务](/服务化架构衍化/微服务/README.md)
+      - [服务拆分](/服务化架构衍化/微服务/服务拆分.md)
+      - [服务治理](/服务化架构衍化/微服务/服务治理.md)
+      - [框架比较](/服务化架构衍化/微服务/框架比较.md)
   - [权限隔离](/权限隔离/README.md)
     - [RBAC](/权限隔离/RBAC/README.md)
       
@@ -142,6 +141,11 @@
       - [JWT](/权限隔离/认证基础/JWT.md)
       - [OAuth](/权限隔离/认证基础/OAuth.md)
       - [Session](/权限隔离/认证基础/Session.md)
+  - [缓存](/缓存/README.md)
+    - [缓存淘汰算法](/缓存/缓存淘汰算法.md)
+    - [缓存策略](/缓存/缓存策略.md)
+    - [缓存系统](/缓存/缓存系统/README.md)
+      
   - [配置中心](/配置中心/README.md)
     - [Consul](/配置中心/Consul/README.md)
       

@@ -1,12 +1,14 @@
 # 微服务与云原生架构
 
-本篇着眼于从单体分层架构、SOA 服务化架构、微服务架构到云原生架构衍化过程中的实践，关于软件架构的理论思考请参阅 [SoftwareArchitecture Series](https://github.com/wx-chevalier/SoftwareArchitecture-Series)。
+本篇着眼于从单体分层架构、SOA 服务化架构、微服务架构到云原生架构衍化过程中的实践。
 
 ![微服务 MindMap](https://s2.ax1x.com/2019/12/08/Qan0Vx.png)
 
-# Nav | 导读
+## Nav | 导读
 
 建议首先阅读[架构衍化](./架构衍化)一章了解服务端业务架构的前世今生。
+
+> 软件架构相关参阅 [《SoftwareArchitecture Series》](https://github.com/wx-chevalier/SoftwareArchitecture-Series)；
 
 # About
 
