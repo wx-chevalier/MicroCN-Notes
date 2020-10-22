@@ -3,6 +3,12 @@
       - [RPC 安全性](/RPC/RPC%20定义/RPC%20安全性.md)
       - [RPC 应用](/RPC/RPC%20定义/RPC%20应用.md)
       - [RPC 衍化](/RPC/RPC%20定义/RPC%20衍化.md)
+    - [分布式追踪](/RPC/分布式追踪/README.md)
+      - [OpenTracing](/RPC/分布式追踪/OpenTracing/README.md)
+        
+      - 系统设计
+        - [开源对比](/RPC/分布式追踪/系统设计/开源对比.md)
+        - [系统设计](/RPC/分布式追踪/系统设计/系统设计.md)
     - [协议编码](/RPC/协议编码/README.md)
       - [Avro](/RPC/协议编码/Avro/README.md)
         - [Java](/RPC/协议编码/Avro/Java.md)
