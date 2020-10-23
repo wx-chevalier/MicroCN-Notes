@@ -4,6 +4,8 @@
       - [RPC 应用](/RPC/RPC%20定义/RPC%20应用.md)
       - [RPC 衍化](/RPC/RPC%20定义/RPC%20衍化.md)
     - [分布式追踪](/RPC/分布式追踪/README.md)
+      - [OpenTelemetry](/RPC/分布式追踪/OpenTelemetry/README.md)
+        
       - [OpenTracing](/RPC/分布式追踪/OpenTracing/README.md)
         
       - 系统设计
@@ -127,6 +129,9 @@
       - [服务治理](/服务化架构衍化/微服务/服务治理.md)
       - [框架比较](/服务化架构衍化/微服务/框架比较.md)
   - [权限隔离](/权限隔离/README.md)
+    - OAuth
+      - [Hydra](/权限隔离/OAuth/Hydra/README.md)
+        
     - [RBAC](/权限隔离/RBAC/README.md)
       
     - [SSO](/权限隔离/SSO/README.md)
