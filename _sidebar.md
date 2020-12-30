@@ -96,6 +96,7 @@
       - [4.6.2 JWT](/权限隔离/认证基础/JWT.md)
       - [4.6.3 OAuth](/权限隔离/认证基础/OAuth.md)
       - [4.6.4 Session](/权限隔离/认证基础/Session.md)
+      - [4.6.5 认证方式对比](/权限隔离/认证基础/认证方式对比.md)
   - [5 服务网格](/服务网格/README.md)
     - [5.1 Dapr](/服务网格/Dapr/README.md)
       - [5.1.1 Hello World](/服务网格/Dapr/Hello%20World.md)
