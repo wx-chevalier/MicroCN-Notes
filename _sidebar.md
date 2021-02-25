@@ -89,30 +89,29 @@
       - [5.4.4 部署与配置](/配置中心/ZooKeeper/部署与配置.md)
     - [5.5 基础配置方式](/配置中心/基础配置方式.md)
   - [6 权限隔离](/权限隔离/README.md)
-    - 6.1 OAuth
-      - [6.1.1 Hydra](/权限隔离/OAuth/Hydra/README.md)
-        
-    - [6.2 RBAC](/权限隔离/RBAC/README.md)
+    - [6.1 RBAC](/权限隔离/RBAC/README.md)
       
-    - [6.3 SSO](/权限隔离/SSO/README.md)
-      - [6.3.1 CAS](/权限隔离/SSO/CAS/README.md)
+    - [6.2 SSO](/权限隔离/SSO/README.md)
+      - [6.2.1 CAS](/权限隔离/SSO/CAS/README.md)
         
-      - [6.3.2 Keycloak](/权限隔离/SSO/Keycloak/README.md)
+      - [6.2.2 Hydra](/权限隔离/SSO/Hydra/README.md)
         
-      - [6.3.3 Pac4j](/权限隔离/SSO/Pac4j/README.md)
+      - [6.2.3 Keycloak](/权限隔离/SSO/Keycloak/README.md)
         
-      - [6.3.4 Shiro](/权限隔离/SSO/Shiro/README.md)
+      - [6.2.4 Pac4j](/权限隔离/SSO/Pac4j/README.md)
         
-    - [6.4 多租户](/权限隔离/多租户/README.md)
-      - [6.4.1 通用多租户框架](/权限隔离/多租户/通用多租户框架.md)
-    - [6.5 开放平台](/权限隔离/开放平台/README.md)
-      - [6.5.1 扫码登陆](/权限隔离/开放平台/扫码登陆.md)
-    - 6.6 认证基础
-      - [6.6.1 HTTP 认证](/权限隔离/认证基础/HTTP%20认证.md)
-      - [6.6.2 JWT](/权限隔离/认证基础/JWT.md)
-      - [6.6.3 OAuth](/权限隔离/认证基础/OAuth.md)
-      - [6.6.4 Session](/权限隔离/认证基础/Session.md)
-      - [6.6.5 认证方式对比](/权限隔离/认证基础/认证方式对比.md)
+    - [6.3 多租户](/权限隔离/多租户/README.md)
+      - [6.3.1 通用多租户框架](/权限隔离/多租户/通用多租户框架.md)
+    - [6.4 开放平台](/权限隔离/开放平台/README.md)
+      - [6.4.1 扫码登陆](/权限隔离/开放平台/扫码登陆.md)
+    - [6.5 认证基础](/权限隔离/认证基础/README.md)
+      - 6.5.1 HTTP
+        - [6.5.1.1 HTTP 认证](/权限隔离/认证基础/HTTP/HTTP%20认证.md)
+        - [6.5.1.2 Session](/权限隔离/认证基础/HTTP/Session.md)
+      - 6.5.2 JWT
+        - [6.5.2.1 JWT](/权限隔离/认证基础/JWT/JWT.md)
+      - [6.5.3 OAuth](/权限隔离/认证基础/OAuth/README.md)
+        
   - 7 微服务框架
     - [7.1 Dubbo](/微服务框架/Dubbo/README.md)
       - [7.1.1 Kubernetes](/微服务框架/Dubbo/Kubernetes/README.md)
