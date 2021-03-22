@@ -12,6 +12,6 @@
 
 5、服务器收到 session_id，找到前期保存的数据，由此得知用户的身份。
 
-# TBD
+# Links
 
 - https://www.jianshu.com/p/25802021be63

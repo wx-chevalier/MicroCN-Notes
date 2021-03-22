@@ -1,5 +1,5 @@
 # 开放平台
 
-# TBD
+# Links
 
 - https://mp.weixin.qq.com/s/EToZ5wqfQCevmgRwdEWdcg

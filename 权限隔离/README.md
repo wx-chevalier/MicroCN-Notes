@@ -12,7 +12,7 @@ Borsos 指出，单点登录(SSO)方案可能看起来是一个好主意，但�
 
 Borsos 建议使用客户端令牌(使用 JWT)和 API 网关结合的方案，因为这个方案通常使用起来比较容易，且性能也不错。SSO 方案虽然能满足需求，但他认为还是应该避免使用。若分布式会话方案所需要的相关技术已经应用在你的场景上，那么这个方案也是比较有趣的。他同时强调在选择解决方案时应着重考虑注销的重要性。
 
-# TBD
+# Links
 
 - https://zhuanlan.zhihu.com/p/62336927
 - https://medium.com/@jcbaey/authentication-in-spa-reactjs-and-vuejs-the-right-way-e4a9ac5cd9a3

@@ -81,6 +81,6 @@ JSON Schema 定义了如何基于 JSON 格式描述 JSON 数据结构的规范�
 
 接口数据的校验工作，往往依赖于测试代码逻辑和用例。如果用 JSON Schema 描述一个数据接口，就不需要再编写测试代码了，所有的逻辑都可以移植到 JSON Schema 中维护。配合 `jsv`、`tv4` 等二方校验工具，接口测试可以真正自动化。
 
-# TBD
+# Links
 
 - [JSON Schema 那些事儿：基本概念 ](http://taobaofed.org/blog/2016/01/25/jsonschema/)

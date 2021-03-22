@@ -101,6 +101,6 @@ jwt.verify(token, "shhhhh", function (err, decoded) {
 });
 ```
 
-# TBD
+# Links
 
 - https://mp.weixin.qq.com/s/j-Ap_30PO8bSFUY3Q_RHcg
