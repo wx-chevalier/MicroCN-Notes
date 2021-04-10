@@ -3,3 +3,5 @@
 # Links
 
 - Web Authentication Methods Compared https://testdriven.io/blog/web-authentication-methods/
+
+- 聊聊Web Api 认证方案那点儿事 https://cubox.pro/c/4uLibA 
