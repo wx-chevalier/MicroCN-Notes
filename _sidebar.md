@@ -71,8 +71,8 @@
         - [4.1.4.1 Hello World](/微服务框架/Dapr/部署案例/Hello%20World.md)
         - [4.1.4.2 K8s](/微服务框架/Dapr/部署案例/K8s.md)
     - [4.2 Dubbo](/微服务框架/Dubbo/README.md)
-      - [4.2.1 Kubernetes](/微服务框架/Dubbo/Kubernetes/README.md)
-        - [4.2.1.1 Kubernetes 与 Dubbo](/微服务框架/Dubbo/Kubernetes/Kubernetes%20与%20Dubbo.md)
+      - [4.2.1 K8s](/微服务框架/Dubbo/K8s/README.md)
+        - [4.2.1.1 K8s 与 Dubbo](/微服务框架/Dubbo/K8s/K8s%20与%20Dubbo.md)
       - [4.2.2 架构机制](/微服务框架/Dubbo/架构机制/README.md)
         
       - [4.2.3 踩坑汇总](/微服务框架/Dubbo/踩坑汇总.md)
