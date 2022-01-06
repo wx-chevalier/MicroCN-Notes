@@ -1,6 +1,6 @@
 # 清新脱俗的 Web 服务器 Caddy
 
-作为新兴 Web 服务器，Caddy 提供了很多简单易用的功能而没有历史的包袱，其默认支持并且能帮你自动配置 HTTP/2、HTTPS，对于 IPV6、WebSockets 都有很好的支持。基于 Go 编写的 Caddy 天生对于多核具有很好的支持，并且其丰富的插件系统提供了文件管理、文件上传、基于 MarkDown 的博客系统等等开箱即用的扩展功能。我们可以在[官方下载界面](https://caddyserver.com/download)选择你需要的插件功能定制个性化二进制文件，下载完毕之后即可以使用`caddy`命令直接运行。其默认监听 2015 端口，在浏览器中打开 [http://localhost:2015](http://localhost:2015)  即可以查看其运行情况。我们也可以通过`-conf`参数指定配置文件：
+作为新兴 Web 服务器，Caddy 提供了很多简单易用的功能而没有历史的包袱，其默认支持并且能帮你自动配置 HTTP/2、HTTPS，对于 IPV6、WebSockets 都有很好的支持。基于 Go 编写的 Caddy 天生对于多核具有很好的支持，并且其丰富的插件系统提供了文件管理、文件上传、基于 MarkDown 的博客系统等等开箱即用的扩展功能。我们可以在[官方下载界面](https://caddyserver.com/download)选择你需要的插件功能定制个性化二进制文件，下载完毕之后即可以使用`caddy`命令直接运行。其默认监听 2015 端口，在浏览器中打开 [http://localhost:2015](http://localhost:2015) 即可以查看其运行情况。我们也可以通过`-conf`参数指定配置文件：
 
 ```
 $ caddy -conf="/path/to/Caddyfile"
@@ -62,14 +62,14 @@ bind 127.0.0.1
 
 ```
 mysite.com {
-  root /www/mysite.com
+  root /www/mysite.com
 }
 
 
 sub.mysite.com {
-  root /www/sub.mysite.com
-  gzip
-  log ../access.log
+  root /www/sub.mysite.com
+  gzip
+  log ../access.log
 }
 ```
 
@@ -77,7 +77,7 @@ sub.mysite.com {
 
 ```
 localhost:2020, https://site.com, http://mysite.com {
-  ...
+  ...
 }
 ```
 
@@ -103,20 +103,20 @@ regex 是用于匹配请求文件的正则表达式，而 duration 则是 0y0m0d
 
 ```
 expires {
-  match some/path/.*.css$ 1y # expires
-  css files in some/path after one year
-  match .js$ 1m # expires
-  js files after 30 days
-  match .png$ 1d # expires
-  png files after one day
-  match .jpg$ 1h # expires
-  jpg files after one hour
-  match .pdf$ 1i # expires
-  pdf file after one minute
-  match .txt$ 1s # expires
-  txt files after one second
-  match .html$ 5i30s # expires
-  html files after 5 minutes 30 seconds
+  match some/path/.*.css$ 1y # expires
+  css files in some/path after one year
+  match .js$ 1m # expires
+  js files after 30 days
+  match .png$ 1d # expires
+  png files after one day
+  match .jpg$ 1h # expires
+  jpg files after one hour
+  match .pdf$ 1i # expires
+  pdf file after one minute
+  match .txt$ 1s # expires
+  txt files after one second
+  match .html$ 5i30s # expires
+  html files after 5 minutes 30 seconds
 }
 ```
 
@@ -132,22 +132,22 @@ from 即是请求匹配的基本路径，to 则是请求转发到的端点地址
 
 ```
 proxy from to... {
-  policy random | least_conn | round_robin | ip_hash
-  fail_timeout duration
-  max_fails integer
-  try_duration duration
-  try_interval duration
-  health_check path
-  health_check_interval interval_duration
-  health_check_timeout timeout_duration
-  header_upstream name value
-  header_downstream name value
-  keepalive number
-  without prefix
-  except ignored_paths...
-  upstream to
-  insecure_skip_verify
-  preset
+  policy random | least_conn | round_robin | ip_hash
+  fail_timeout duration
+  max_fails integer
+  try_duration duration
+  try_interval duration
+  health_check path
+  health_check_interval interval_duration
+  health_check_timeout timeout_duration
+  header_upstream name value
+  header_downstream name value
+  keepalive number
+  without prefix
+  except ignored_paths...
+  upstream to
+  insecure_skip_verify
+  preset
 }
 ```
 
@@ -168,7 +168,7 @@ proxy / web1.local:80 web2.local:90 web3.local:100
 
 ```
 proxy / web1.local:80 web2.local:90 web3.local:100 {
-  policy round_robin
+  policy round_robin
 }
 ```
 
@@ -176,17 +176,17 @@ proxy / web1.local:80 web2.local:90 web3.local:100 {
 
 ```
 proxy / web1.local:80 web2.local:90 web3.local:100 {
-    policy round_robin
-    health_check /health
-    transparent
+    policy round_robin
+    health_check /health
+    transparent
 }
 ```
 
 转发 WebSocket 请求：
 
 ```
-proxy /stream localhost:8080 {
-  websocket
+proxy /stream localhost:8080 {
+  websocket
 }
 ```
 
@@ -195,7 +195,7 @@ proxy /stream localhost:8080 {
 ```
 proxy / backend:1234 {
     # 这里取消 /static /robots.txt 方向的请求
-  except /static /robots.txt
+  except /static /robots.txt
 }
 ```
 
@@ -229,7 +229,7 @@ if (window.WebSocket != undefined) {
   connection.onopen = wsOpen;
 
   function wsOpen(event) {
-    connection.send("Hello World");
+    connection.send("Hello World");
   }
   function wsMessage(event) {
     console.log(event.data);
@@ -247,10 +247,10 @@ var readline = require("readline");
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-  terminal: false
+  terminal: false,
 });
 
-rl.on("line", function(line) {
+rl.on("line", function (line) {
   console.log(line);
 });
 ```
@@ -267,13 +267,13 @@ websocket /echo "node tmp.js"
 
 ```
 upload path {
-  to"directory"
-  yes_without_tls
-  filenames_formnone|NFC|NFD
-  filenames_inu0000–uff00 [u0000–uff00| …]
-  hmac_keys_inkeyID_0=base64(binary) [keyID_n=base64(binary) | …]
-  timestamp_tolerance 0..32
-  silent_auth_errors
+  to"directory"
+  yes_without_tls
+  filenames_formnone|NFC|NFD
+  filenames_inu0000–uff00 [u0000–uff00| …]
+  hmac_keys_inkeyID_0=base64(binary) [keyID_n=base64(binary) | …]
+  timestamp_tolerance 0..32
+  silent_auth_errors
 }
 ```
 
@@ -281,7 +281,7 @@ upload path {
 
 ```
 upload /web/path {
-  to "/var/tmp"
+  to "/var/tmp"
 }
 ```
 
@@ -290,8 +290,8 @@ upload /web/path {
 ```
 # HTTP PUT
 curl \
-  -T /etc/os-release \
-  https://127.0.0.1/web/path/from-release
+  -T /etc/os-release \
+  https://127.0.0.1/web/path/from-release
 ```
 
 或者同时上传多个文件：
@@ -299,9 +299,9 @@ curl \
 ```
 # HTTP POST
 curl \
-  -F gitconfig=@.gitconfig \
-  -F id_ed25519.pub=@.ssh/id_ed25519.pub \
-  https://127.0.0.1/web/path/
+  -F gitconfig=@.gitconfig \
+  -F id_ed25519.pub=@.ssh/id_ed25519.pub \
+  https://127.0.0.1/web/path/
 ```
 
 我们也可以使用指令来移动或者删除这些文件：
@@ -309,13 +309,13 @@ curl \
 ```
 # MOVE is 'mv'
 curl -X MOVE \
-  -H "Destination: /web/path/to-release" \
-  https://127.0.0.1/web/path/from-release
+  -H "Destination: /web/path/to-release" \
+  https://127.0.0.1/web/path/from-release
 
 
 # DELETE is 'rm -r'
 curl -X DELETE \
-  https://127.0.0.1/web/path/to-release
+  https://127.0.0.1/web/path/to-release
 ```
 
 # 访问控制
@@ -328,7 +328,7 @@ Caddy 内建支持 HTTP Basic Authentication，能够强制用户使用指定的
 
 ```
 basicauth username password {
-  resources
+  resources
 }
 ```
 
@@ -342,9 +342,9 @@ basicauth /secret Bob hiccup
 
 ```
 basicauth "Mary Lou" milkshakes {
-  /notes-for-mary-lou.txt
-  /marylou-files
-  /another-file.txt
+  /notes-for-mary-lou.txt
+  /marylou-files
+  /another-file.txt
 }
 ```
 
@@ -356,9 +356,9 @@ jwt 指令是 Caddy 的扩展功能，我们需要在官网上选择添加该功
 jwt path
 // 或者
 jwt {
-  pathresource
-  allow claim value
-  denyclaim value
+  pathresource
+  allow claim value
+  denyclaim value
 }
 ```
 
@@ -366,9 +366,9 @@ jwt {
 
 ```
 jwt {
-  path/protected
-  denyrole member
-  allow user someone
+  path/protected
+  denyrole member
+  allow user someone
 }
 ```
 
@@ -386,13 +386,13 @@ jwt {
 
 ```
 cors / {
-  originhttp://allowedSite.com
-  originhttp://anotherSite.org https://anotherSite.org
-  methods POST,PUT
-  allow_credentials false
-  max_age 3600
-  allowed_headers X-Custom-Header,X-Foobar
-  exposed_headers X-Something-Special,SomethingElse
+  originhttp://allowedSite.com
+  originhttp://anotherSite.org https://anotherSite.org
+  methods POST,PUT
+  allow_credentials false
+  max_age 3600
+  allowed_headers X-Custom-Header,X-Foobar
+  exposed_headers X-Something-Special,SomethingElse
 }
 ```
 
@@ -420,12 +420,12 @@ func3022933({"status":"ok"});
 
 ```
 ipfilter paths... {
-  rule block | allow
-  ip list or/and range of IPs...
-  countrycountries ISO codes...
-  database db_path
-  blockpageblock_page
-  strict
+  rule block | allow
+  ip list or/and range of IPs...
+  countrycountries ISO codes...
+  database db_path
+  blockpageblock_page
+  strict
 }
 ```
 
@@ -433,8 +433,8 @@ ipfilter paths... {
 
 ```
 ipfilter / {
-  rule allow
-  ip 93.168.247.245
+  rule allow
+  ip 93.168.247.245
 }
 ```
 
@@ -442,9 +442,9 @@ ipfilter / {
 
 ```
 ipfilter / {
-  rule block
-  ip 192.168.0.0/16 2E80::20:F8FF:FE31:77CF/16 5.23.4.24
-  blockpage/local/data/default.html
+  rule block
+  ip 192.168.0.0/16 2E80::20:F8FF:FE31:77CF/16 5.23.4.24
+  blockpage/local/data/default.html
 }
 ```
 
@@ -452,10 +452,10 @@ ipfilter / {
 
 ```
 ipfilter / {
-  ruleallow
-  country FR
-  database/local/data/GeoLite2-Country.mmdb
-  ip99.23.4.24 2E80::20::FEF1:91C4
+  ruleallow
+  country FR
+  database/local/data/GeoLite2-Country.mmdb
+  ip99.23.4.24 2E80::20::FEF1:91C4
 }
 ```
 
@@ -463,9 +463,9 @@ ipfilter / {
 
 ```
 ipfilter / {
-  ruleallow
-  country US JP
-  database/local/data/GeoLite2-Country.mmdb
+  ruleallow
+  country US JP
+  database/local/data/GeoLite2-Country.mmdb
 }
 ```
 
@@ -473,10 +473,10 @@ ipfilter / {
 
 ```
 ipfilter /notglobal /secret {
-  rule block
-  countryUS JP
-  database /local/data/GeoLite2-Country.mmdb
-  blockpage/local/data/default.html
+  rule block
+  countryUS JP
+  database /local/data/GeoLite2-Country.mmdb
+  blockpage/local/data/default.html
 }
 ```
 
@@ -495,11 +495,11 @@ ratelimit /r 2 3 second
 
 ```
 ratelimit rate burst unit {
-  resources
+  resources
 }
 // 限制对于资源文件的访问时长为 2 分钟
 ratelimit 2 2 minute {
-  /foo.html
-  /dir
+  /foo.html
+  /dir
 }
 ```
