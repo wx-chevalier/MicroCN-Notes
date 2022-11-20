@@ -153,10 +153,11 @@
     - 5.6 实践案例
       - [5.6.1 喜马拉雅 自研网关架构演进过程](/接入网关/实践案例/2021-喜马拉雅-自研网关架构演进过程.md)
       - [5.6.2 爱奇艺 基于 Netty 的长连接网关](/接入网关/实践案例/2021-爱奇艺-基于%20Netty%20的长连接网关.md)
-      - [5.6.3 Scratch](/接入网关/实践案例/Scratch/README.md)
-        - [5.6.3.1 基于 Netty 与 Webflux 的网关](/接入网关/实践案例/Scratch/基于%20Netty%20与%20Webflux%20的网关/README.md)
+      - [5.6.3 How Tinder Built Their Own API Gateway](/接入网关/实践案例/2022-How%20Tinder%20Built%20Their%20Own%20API%20Gateway.md)
+      - [5.6.4 Scratch](/接入网关/实践案例/Scratch/README.md)
+        - [5.6.4.1 基于 Netty 与 Webflux 的网关](/接入网关/实践案例/Scratch/基于%20Netty%20与%20Webflux%20的网关/README.md)
           
-        - [5.6.3.2 网关特性](/接入网关/实践案例/Scratch/网关特性.md)
+        - [5.6.4.2 网关特性](/接入网关/实践案例/Scratch/网关特性.md)
   - [6 服务网格](/服务网格/README.md)
     - [6.1 Envoy](/服务网格/Envoy/README.md)
       - [6.1.1 Kuma](/服务网格/Envoy/Kuma/README.md)
