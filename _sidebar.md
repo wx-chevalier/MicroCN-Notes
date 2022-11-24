@@ -19,10 +19,11 @@
       - [2.3.2 服务视图](/服务化架构/服务基础/服务视图.md)
       - [2.3.3 服务间通信](/服务化架构/服务基础/服务间通信.md)
     - [2.4 云原生](/服务化架构/云原生/README.md)
-      - [2.4.1 Distributionless](/服务化架构/云原生/Distributionless.md)
-      - [2.4.2 Serverless](/服务化架构/云原生/Serverless.md)
-      - 2.4.3 .more
-        - [2.4.3.1 容器、K8s、微服务、云原生](/服务化架构/云原生/.more/容器、K8s、微服务、云原生.md)
+      - [2.4.1 Factor 应用原则](/服务化架构/云原生/12-Factor%20应用原则.md)
+      - [2.4.2 Distributionless](/服务化架构/云原生/Distributionless.md)
+      - [2.4.3 Serverless](/服务化架构/云原生/Serverless.md)
+      - 2.4.4 .more
+        - [2.4.4.1 容器、K8s、微服务、云原生](/服务化架构/云原生/.more/容器、K8s、微服务、云原生.md)
     - [2.5 .more](/服务化架构/.more/README.md)
       
   - [3 微服务通信](/微服务通信/README.md)
