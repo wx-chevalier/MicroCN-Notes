@@ -25,8 +25,6 @@ Multi-Runtime（运行时）架构是一种未来架构趋势，Dapr 便是基�
 - 状态：对于服务编排、服务调度、状态管理等需求
 - 绑定：与外部系统、中间件的通讯的需求
 
-![Multi-Runtime 软件架构](https://img2.tuicool.com/3Qfaq2E.jpg)
-
 在此需求基础上，Service Mesh 架构将网络层抽出为独立的边车进程，而参考 Service Mesh 架构，Multi-Runtime 架构则是把各种边车提供的能力统一抽象成若干个 Runtime，这样应用从面向基础组件开发就演变成了面向各种分布式能力开发。
 
 ![Multi-Runtime 面向分布式能力开发](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eeb87f5132923bf850f25c.jpg)
@@ -68,8 +66,6 @@ Dapr 的主要架构可以总结为以下三点：
 - 组件是构建块能力的具体实现者。
 
 应用开发者只需要基于 Dapr 多语言的 SDK，并且面向能力的方式对 Dapr 进行编程，而底层的具体实现方式由 Dapr 以 yaml 文件的方式进行激活。应用无需感知到自己使用的分布式能力是由哪种方式实现的。Dapr 整体的功能图如下图所示。
-
-![Dapr 整体功能图](https://img1.tuicool.com/7JJbemf.png)
 
 ## Dapr 与 Service Mesh
 
