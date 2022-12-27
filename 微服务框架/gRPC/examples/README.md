@@ -1,2 +1,0 @@
-# grpc-snippets
-grpc-examples

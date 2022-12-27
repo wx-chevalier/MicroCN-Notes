@@ -1,1 +1,0 @@
-> https://github.com/sourishkrout/nodevoto/tree/master/assets
