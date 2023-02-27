@@ -26,7 +26,7 @@
     - [1.5 999.参考资料](/1.服务化架构/999.参考资料/README.md)
       
   - 2 10.系统案例 [1]
-    - [2.1 其他案例 [1]](/10.系统案例/其他案例/README.md)
+    - [2.1 其他案例 [2]](/10.系统案例/其他案例/README.md)
       - [2.1.1 System Design Primer [8]](/10.系统案例/其他案例/System%20Design%20Primer/README.md)
         - [2.1.1.1 AWS 上设计一个百万用户级别的系统](/10.系统案例/其他案例/System%20Design%20Primer/AWS%20上设计一个百万用户级别的系统.md)
         - [2.1.1.2 Mint](/10.系统案例/其他案例/System%20Design%20Primer/Mint.md)
@@ -36,6 +36,8 @@
         - [2.1.1.6 社交网络设计数据结构](/10.系统案例/其他案例/System%20Design%20Primer/社交网络设计数据结构.md)
         - [2.1.1.7 网页爬虫](/10.系统案例/其他案例/System%20Design%20Primer/网页爬虫.md)
         - [2.1.1.8 设计 Pastebin.com (或者 Bit.ly)](/10.系统案例/其他案例/System%20Design%20Primer/设计%20Pastebin.com%20(或者%20Bit.ly).md)
+      - [2.1.2 刚果商城](/10.系统案例/其他案例/刚果商城/README.md)
+        
   - 3 2.微服务框架 [8]
     - [3.1 Dapr [4]](/2.微服务框架/Dapr/README.md)
       - [3.1.1 Components](/2.微服务框架/Dapr/Components/README.md)
