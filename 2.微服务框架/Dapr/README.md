@@ -2,15 +2,15 @@
 
 Dapr（Distributed Application Runtime，分布式运行时），是微软内部团队的一个开源项目。Dapr 同样使用 Sidecar 架构，以独立进程的形式与应用程序同时运行，同时兼具 Service Mesh 中 Sidecar/Proxy 的优点和高度可扩展的特性。Dapr 主要有两大特性：一个是跨语言、多运行环境支持（Any language，anywhere），一个是组件的可插拔、可替换。应用开发者可以基于 Dapr 多语言的 SDK 面向 Dapr 的分布式能力进行编程，通过集成 Dapr 的 SDK，可以使用任何语言、任何框架构建自己的微服务应用，并将应用运行在任何有 Dapr 的环境中。
 
-![Dapr 架构图](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eebb385132923bf85cb34f.png)
+![Dapr 架构图](https://assets.ng-tech.icu/superbed/2021/07/14/60eebb385132923bf85cb34f.png)
 
 同时 Dapr 也可以部署在任何环境里面，包括自己本地的环境、边缘计算的场景、拥有 K8s 的环境或者是任何的商业化云产品开发厂商的环境中。
 
-![在非 K8s 环境中部署 Dapr](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eebb5c5132923bf85d4a3e.jpg)
+![在非 K8s 环境中部署 Dapr](https://assets.ng-tech.icu/superbed/2021/07/14/60eebb5c5132923bf85d4a3e.jpg)
 
 在 K8s 的环境中，Dapr 和应用程序运行在同一个 Pod 里，但是在不同的容器中。Dapr 的构建块则分布在其他的 Pod 中，通过 yaml 文件的方式进行激活并让 Dapr 感知到。
 
-![在 K8s 环境中部署 Dapr](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eebb9b5132923bf85e47be.jpg)
+![在 K8s 环境中部署 Dapr](https://assets.ng-tech.icu/superbed/2021/07/14/60eebb9b5132923bf85e47be.jpg)
 
 在构建微服务应用时，每个组件都是独立的。开发人员可以采用其中一个或多个或全部来构建应用，并且组件的更新对应用来说是无感知的，应用程序不会感知到底层组件的升级。这也就是 Dapr 的第二个特性：组件的可插拔、可替换特性。Dapr 通过把一些构建微服务应用所需的最佳实践内置到开放、独立的构建块（building block）中，让开发人员只需专注于业务逻辑代码的编写，即可开发出功能强大的微服务应用，截至现在，Dapr 社区中已经有 70 多个组件可供开发人员进行使用。
 
@@ -27,17 +27,17 @@ Multi-Runtime（运行时）架构是一种未来架构趋势，Dapr 便是基�
 
 在此需求基础上，Service Mesh 架构将网络层抽出为独立的边车进程，而参考 Service Mesh 架构，Multi-Runtime 架构则是把各种边车提供的能力统一抽象成若干个 Runtime，这样应用从面向基础组件开发就演变成了面向各种分布式能力开发。
 
-![Multi-Runtime 面向分布式能力开发](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eeb87f5132923bf850f25c.jpg)
+![Multi-Runtime 面向分布式能力开发](https://assets.ng-tech.icu/superbed/2021/07/14/60eeb87f5132923bf850f25c.jpg)
 
 ## Mesh
 
 Service Mesh 的发展为我们指明了一个发展方向：将 SDK 中的分布式能力外移到独立的 Sidecar 中。但是我们可以想象一下，在未来是否可以将我们现在集成的中间件能力也外移到独立的 Sidecar 中呢？比如说将数据库 Mesh 化、将消息中间件 Mesh 化、将缓存 Mesh 化，将除了业务代码程序之外的全部 SDK 都 Mesh 化。
 
-![更多的 Mesh 化模块](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eeb8fd5132923bf85326f3.jpg)
+![更多的 Mesh 化模块](https://assets.ng-tech.icu/superbed/2021/07/14/60eeb8fd5132923bf85326f3.jpg)
 
 我们可以将这些独立出来的 Mesh 化模块统称为提供不同功能的“运行时”组件。过多的“运行时”组件出现之后，应用程序在运行时就会依赖一个或多个这样的 Mesh 化模块。虽然做到了将 SDK 移出了应用程序，但是这种多依赖的结果显然不是我们所期望的形式。Dapr 的出现将这些提供不同分布式能力以及中间件能力的“运行时”模块进行了整合，开发人员可以按照自己的需求，通过 yaml 文件的方式，将提供不同功能的组件整合到 Dapr 的构建块（Building Block）中。应用程序可以通过 Dapr 提供的标准 API，访问构建块来获得并使用这些能力。
 
-![K8s 中的 Dapr](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eeb92d5132923bf853f5e6.jpg)
+![K8s 中的 Dapr](https://assets.ng-tech.icu/superbed/2021/07/14/60eeb92d5132923bf853f5e6.jpg)
 
 在 K8s 环境中，应用程序代码和 Dapr 的 Sidecar 分别运行在两个不同的容器中。应用程序代码可以通过标准的 HTTP/gRPC 协议使用 Dapr 提供的各种分布式能力，而 Dapr 中提供能力的构建块（Building Block）又是可以根据开发人员的需求进行可插拔和高度扩展的。
 
@@ -49,11 +49,11 @@ Dapr 虽然也使用 Sidecar 架构，但是却提供了更多的能力和使用
 
 Dapr 中所有功能都是通过使用 Dapr 中的构建块（Building Block）来进行提供。下图中蓝色方框中的内容，都是 Dapr 目前已经提供给应用开发人员使用的构建块。
 
-![Dapr 官方构建块](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eeb9e65132923bf856f8e9.jpg)
+![Dapr 官方构建块](https://assets.ng-tech.icu/superbed/2021/07/14/60eeb9e65132923bf856f8e9.jpg)
 
 在 Dapr 的架构中，有三个主要的组成部分：Dapr API、构建块（Building Block）和组件（Component），他们之间的关系如下图所示。
 
-![Dapr 主要的组成部分](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eeba0b5132923bf8579843.jpg)
+![Dapr 主要的组成部分](https://assets.ng-tech.icu/superbed/2021/07/14/60eeba0b5132923bf8579843.jpg)
 
 应用程序可以通过标准的 Dapr API 与构建块进行通信，构建块作为 Dapr 对外提供分布式能力的基本单元，将各种分布式能力进行了抽象，并将自己内部整合的分布式能力提供给应用程序。组件（Component）是构建块的具体实现，每个构建块都是由一个或多个组件组成，并且所有的组件都是可插拔和高度扩展的。Dapr 内部有自己的一套 SPI 扩展机制，任何开源的或者商业化的产品都可以很方便的集成到一个组件中。
 
@@ -71,7 +71,7 @@ Dapr 的主要架构可以总结为以下三点：
 
 虽然 Dapr 和 Service Mesh 在架构上都是使用的 Sidecar 模式，并且在功能上也存在一些重叠部分，但是不能将 Dapr 简单的定义为 Service Mesh。
 
-![Dapr 与 Service Mesh 的比较](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eebc505132923bf8614019.jpg)
+![Dapr 与 Service Mesh 的比较](https://assets.ng-tech.icu/superbed/2021/07/14/60eebc505132923bf8614019.jpg)
 
 Service Mesh 主要专注于服务调用和网络问题，而 Dapr 是为了给应用服务提供更多的 分布式能力 而诞生的，两者的关注点在本质上就不一样。Service Mesh 主要以基础设施为中心：
 

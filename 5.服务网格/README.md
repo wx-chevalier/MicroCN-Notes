@@ -8,8 +8,8 @@ Service Mesh 的核心思路与微服务软件架构的思路是一脉相承的�
 
 我们可以将服务网格的作用类比为 OSI 网络模型中第 7 级的软件定义网络（SDN）。SDN 创建了一个抽象层，使网络管理员不必处理物理网络连接，服务网格则是将应用程序的底层基础设施与软件所交互的抽象体系结构进行了解耦。Mesh，即网格的意思。Service Mesh 就是将服务像网格一样穿在一起，而真正进行网络通信的是网格内与应用程序（绿色的部分）一起部署的 Sidecar（蓝色的部分）。
 
-![Mesh 示意图](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eeab925132923bf812d675.png)
+![Mesh 示意图](https://assets.ng-tech.icu/superbed/2021/07/14/60eeab925132923bf812d675.png)
 
 在 Service Mesh 中，Sidecar 与应用程序部署在不同的进程中，不管 Sidecar 进行何种变化，应用程序对此都是是无感知的。Service Mesh 将原来集成到 SDK 中的服务发现、负载均衡等分布式能力下沉到 Sidecar 中，通过 Sidecar 的流量劫持转发应用程序的请求，所有的服务都通过自己的 Sidecar 进行相互通信。所有的 Sidecar 集合到一起，就组成了 Service Mesh 的数据平面（所有的浅蓝色方块）。数据平面中的 Sidecar 则统一由控制平面进行管理（深蓝色方块）。
 
-![数据平面与控制平面](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/superbed/2021/07/14/60eeabda5132923bf8144fa4.jpg)
+![数据平面与控制平面](https://assets.ng-tech.icu/superbed/2021/07/14/60eeabda5132923bf8144fa4.jpg)
