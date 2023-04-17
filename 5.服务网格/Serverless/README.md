@@ -1,4 +1,4 @@
-![](https://i.postimg.cc/Yq5Mymft/image.png)
+![](https://assets.ng-tech.icu/item/20230417205938.png)
 
 # Serverless
 
@@ -6,7 +6,7 @@
 
 Serverless 目前主要的落地形式为 BaaS 与 FaaS。BaaS 后端即服务，即是一些后端云服务，比如云数据库、对象存储、消息队列等。利用 BaaS，可以极大简化我们的应用开发难度。FaaS 函数即服务，则是暂存容器中运行的自定义代码，函数是无服务器架构中抽象语言运行时的最小单位。在 FaaS 中，用户主要为函数的运行时间付费，而不需要关心 CPU 或 RAM 或任何其他资源及其运维的负担。
 
-![](https://i.postimg.cc/J4DRqQXT/image.png)
+![](https://assets.ng-tech.icu/item/20230417205856.png)
 
 参考 BaaS 与 FaaS 的定义，我们可以知道 Serverless 的主要特点有：
 
