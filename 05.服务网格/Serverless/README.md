@@ -18,7 +18,7 @@ Serverless 目前主要的落地形式为 BaaS 与 FaaS。BaaS 后端即服务�
 
 - 按实际使用计费：使用 Serverless 成本很低，因为我们只需要为每次函数的运行付费。函数不运行，则不花钱，也不会浪费服务器资源。
 
-这些特征的本质，是用户对于云端应用开发，乃至于所谓云原生应用中的用户友好与低心智负担方向演讲的最直接途径，而这种简单、经济、可信赖的期许，也是云计算的初心。当然 Serverless 并不拘泥于 Function，而是应该多种部署形态并存，譬如以应用方式部署，则是遵循单一职责原则，但是能够触发多个事件；也可以在容器级别部署，能够包含任意语言、任意运行时，譬如 [Knative](https://github.com/knative) 这样的解法。在[微服务与云原生/Serverless](https://github.com/wxyyxc1992/Backend-Series/blob/master/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%8E%E4%BA%91%E5%8E%9F%E7%94%9F/Serverless/README.md#L17) 一节中我们也讨论了更多的 Serverless 落地模式。
+这些特征的本质，是用户对于云端应用开发，乃至于所谓云原生应用中的用户友好与低心智负担方向演讲的最直接途径，而这种简单、经济、可信赖的期许，也是云计算的初心。当然 Serverless 并不拘泥于 Function，而是应该多种部署形态并存，譬如以应用方式部署，则是遵循单一职责原则，但是能够触发多个事件；也可以在容器级别部署，能够包含任意语言、任意运行时，譬如 [Knative](https://github.com/knative) 这样的解法。在[微服务与云原生/Serverless](https://github.com/wxyyxc1992/Backend-Notes/blob/master/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%8E%E4%BA%91%E5%8E%9F%E7%94%9F/Serverless/README.md#L17) 一节中我们也讨论了更多的 Serverless 落地模式。
 
 从前端的视角来看，Serverless 也赋予了前端更多的自由与可能性，在服务端渲染，小程序开发的简单服务端支持，包括 BFF 接口聚合等方面都有很多的空间。
 

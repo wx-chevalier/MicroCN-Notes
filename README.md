@@ -4,7 +4,7 @@
 
 ![微服务 MindMap](https://s2.ax1x.com/2019/12/08/Qan0Vx.png)
 
-> 本篇详细导读参阅[INTRODUCTION.md](./INTRODUCTION.md)；软件架构相关参阅 [《SoftwareArchitecture Series》](https://github.com/wx-chevalier/SoftwareArchitecture-Series)；Spring 相关开发参阅 《[Spring-Series](https://github.com/wx-chevalier/Spring-Series?q=)》；
+> 本篇详细导读参阅[INTRODUCTION.md](./INTRODUCTION.md)；软件架构相关参阅 [《SoftwareArchitecture Series》](https://github.com/wx-chevalier/SoftwareArchitecture-Notes)；Spring 相关开发参阅 《[Spring-Notes](https://github.com/wx-chevalier/Spring-Notes?q=)》；
 
 # About
 
