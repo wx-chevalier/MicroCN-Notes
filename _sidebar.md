@@ -20,7 +20,10 @@
       - 1.4.2 99.参考资料 [1]
         - [1.4.2.1 容器、K8s、微服务、云原生](/01.服务化架构/04.云原生/99.参考资料/容器、K8s、微服务、云原生.md)
       - [1.4.3 Distributionless](/01.服务化架构/04.云原生/Distributionless.md)
-      - [1.4.4 Serverless](/01.服务化架构/04.云原生/Serverless.md)
+      - [1.4.4 Serverless [3]](/01.服务化架构/04.云原生/Serverless/README.md)
+        - [1.4.4.1 BaaS](/01.服务化架构/04.云原生/Serverless/BaaS.md)
+        - [1.4.4.2 FaaS](/01.服务化架构/04.云原生/Serverless/FaaS.md)
+        - [1.4.4.3 Serverless 发展历程](/01.服务化架构/04.云原生/Serverless/Serverless%20发展历程.md)
     - [1.5 99.参考资料](/01.服务化架构/99.参考资料/README.md)
       
   - 2 02.微服务 RPC [9]
