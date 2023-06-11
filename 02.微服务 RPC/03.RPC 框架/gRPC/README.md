@@ -39,19 +39,13 @@ HTTP 头是传递有关其他端点状态，请求或响应以及有效负载的
 - END_STREAM - This flag denotes the end of a DATA frame.
 
 - HEADERS - This frame will open a stream.
-
 - Idle - This is a state that a stream can be in when it is opened by receiving a HEADERS frame.
-
 - Reserved (Local) - To be in this state is means that one has sent a PUSH_PROMISE frame.
 
 - Reserved (Remote) - To be in this state is means that it has been reserved by a remote endpoint.
-
 - Open - To be in this state means that both endpoints can send frames.
-
 - Closed - This is a terminal state.
-
 - Half-Closed (Local) - This means that no frames can be sent except for WINDOW_UPDATE, PRIORITY, and RST_STREAM.
-
 - Half-Closed (Remote) - This means that a frame is not used by the remote endpoint to send frames of data.
 
 ## Flow Control of Streams
