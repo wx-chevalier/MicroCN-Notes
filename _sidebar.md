@@ -120,12 +120,12 @@
     - 4.2 04.接入网关 [1]
       - 4.2.1 Kong [1]
         - [4.2.1.1 Kong](/04.接入网关/04.接入网关/Kong/Kong.md)
-    - [4.3 05.长连接服务 [3]](/04.接入网关/05.长连接服务/README.md)
+    - [4.3 05~长连接服务 [3]](/04.接入网关/05~长连接服务/README.md)
       - 4.3.1 DeepStream [1]
-        - [4.3.1.1 DeepStream](/04.接入网关/05.长连接服务/DeepStream/DeepStream.md)
-      - [4.3.2 WebSocket 网关](/04.接入网关/05.长连接服务/WebSocket%20网关/README.md)
+        - [4.3.1.1 DeepStream](/04.接入网关/05~长连接服务/DeepStream/DeepStream.md)
+      - [4.3.2 WebSocket 网关](/04.接入网关/05~长连接服务/WebSocket%20网关/README.md)
         
-      - [4.3.3 多机房多网络](/04.接入网关/05.长连接服务/多机房多网络.md)
+      - [4.3.3 多机房多网络](/04.接入网关/05~长连接服务/多机房多网络.md)
     - 4.4 10.实践案例 [4]
       - [4.4.1 喜马拉雅 自研网关架构演进过程](/04.接入网关/10.实践案例/2021-喜马拉雅-自研网关架构演进过程.md)
       - [4.4.2 爱奇艺 基于 Netty 的长连接网关](/04.接入网关/10.实践案例/2021-爱奇艺-基于%20Netty%20的长连接网关.md)
@@ -134,26 +134,26 @@
         - [4.4.4.1 基于 Netty 与 Webflux 的网关](/04.接入网关/10.实践案例/Scratch/基于%20Netty%20与%20Webflux%20的网关/README.md)
           
         - [4.4.4.2 网关特性](/04.接入网关/10.实践案例/Scratch/网关特性.md)
-  - [5 05.服务网格 [6]](/05.服务网格/README.md)
-    - [5.1 Envoy [1]](/05.服务网格/Envoy/README.md)
-      - [5.1.1 Kuma](/05.服务网格/Envoy/Kuma/README.md)
+  - [5 05~服务网格 [6]](/05~服务网格/README.md)
+    - [5.1 Envoy [1]](/05~服务网格/Envoy/README.md)
+      - [5.1.1 Kuma](/05~服务网格/Envoy/Kuma/README.md)
         
-    - [5.2 Istio](/05.服务网格/Istio/README.md)
+    - [5.2 Istio](/05~服务网格/Istio/README.md)
       
-    - [5.3 Linkerd](/05.服务网格/Linkerd/README.md)
+    - [5.3 Linkerd](/05~服务网格/Linkerd/README.md)
       
-    - [5.4 Serverless [3]](/05.服务网格/Serverless/README.md)
-      - [5.4.1 函数模式](/05.服务网格/Serverless/函数模式.md)
-      - [5.4.2 设计模式](/05.服务网格/Serverless/设计模式.md)
-      - [5.4.3 阿里云](/05.服务网格/Serverless/阿里云.md)
+    - [5.4 Serverless [3]](/05~服务网格/Serverless/README.md)
+      - [5.4.1 函数模式](/05~服务网格/Serverless/函数模式.md)
+      - [5.4.2 设计模式](/05~服务网格/Serverless/设计模式.md)
+      - [5.4.3 阿里云](/05~服务网格/Serverless/阿里云.md)
     - 5.5 可视化 [1]
-      - [5.5.1 Kiali](/05.服务网格/可视化/Kiali/README.md)
+      - [5.5.1 Kiali](/05~服务网格/可视化/Kiali/README.md)
         
     - 5.6 设计与对比 [4]
-      - [5.6.1 Sidecar](/05.服务网格/设计与对比/Sidecar.md)
-      - [5.6.2 应用场景](/05.服务网格/设计与对比/应用场景.md)
-      - [5.6.3 框架对比](/05.服务网格/设计与对比/框架对比.md)
-      - [5.6.4 背景分析](/05.服务网格/设计与对比/背景分析.md)
+      - [5.6.1 Sidecar](/05~服务网格/设计与对比/Sidecar.md)
+      - [5.6.2 应用场景](/05~服务网格/设计与对比/应用场景.md)
+      - [5.6.3 框架对比](/05~服务网格/设计与对比/框架对比.md)
+      - [5.6.4 背景分析](/05~服务网格/设计与对比/背景分析.md)
   - 6 10.系统案例 [1]
     - [6.1 其他案例 [2]](/10.系统案例/其他案例/README.md)
       - [6.1.1 System Design Primer [8]](/10.系统案例/其他案例/System%20Design%20Primer/README.md)
