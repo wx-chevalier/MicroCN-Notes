@@ -37,7 +37,7 @@ public class AccountTccActionImpl implements AccountTccAction {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public boolean prepareDecreaseMoney(BusinessActionContext businessActionContext, Long userId, BigDecimal money) {
-        log.info("减少账户金额，第一阶段锁定金额，userId=" + userId + "， money=" + money);
+        log.info("减少账户金额，第一阶段锁定金额，userId=" + userId + "，money=" + money);
         AccountDO account = accountMapper.findOneByUserId(userId);
         //余额不足，处理
         if (account.getResidue().compareTo(money) < 0) {
@@ -60,7 +60,7 @@ public class AccountTccActionImpl implements AccountTccAction {
     public boolean commit(BusinessActionContext businessActionContext) {
         long userId = Long.parseLong(businessActionContext.getActionContext("userId").toString());
         BigDecimal money = new BigDecimal(businessActionContext.getActionContext("money").toString());
-        log.info("减少账户金额，第二阶段，提交，userId=" + userId + "， money=" + money);
+        log.info("减少账户金额，第二阶段，提交，userId=" + userId + "，money=" + money);
 
         //防止重复提交
         if (ResultHolder.getResult(getClass(), businessActionContext.getXid()) == null) {
@@ -88,7 +88,7 @@ public class AccountTccActionImpl implements AccountTccAction {
         if (ResultHolder.getResult(getClass(), businessActionContext.getXid()) == null) {
             return true;
         }
-        log.info("减少账户金额，第二阶段，回滚，userId=" + userId + "， money=" + money);
+        log.info("减少账户金额，第二阶段，回滚，userId=" + userId + "，money=" + money);
         accountMapper.updateFrozenToResidue(userId, money);
         //删除标识
         ResultHolder.removeResult(getClass(), businessActionContext.getXid());

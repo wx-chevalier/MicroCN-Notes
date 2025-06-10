@@ -4,7 +4,7 @@
 
 ## 为什么需要 RedLock
 
-这一点很好理解，因为普通的分布式锁算法在加锁时它的 KEY 只会存在于某一个 Redis Master 实例以及它的 slave 上（假如有 slave 的话， 即使 cluster 集群模式，也是一样的。因为一个 KEY 只会属于一个 slot，一个 slot 只会属于一个 Redis 节点），如下图所示（图中虚线表示 cluster 中 gossip 协议交互路径）：
+这一点很好理解，因为普通的分布式锁算法在加锁时它的 KEY 只会存在于某一个 Redis Master 实例以及它的 slave 上（假如有 slave 的话，即使 cluster 集群模式，也是一样的。因为一个 KEY 只会属于一个 slot，一个 slot 只会属于一个 Redis 节点），如下图所示（图中虚线表示 cluster 中 gossip 协议交互路径）：
 ![image.png](https://a.perfma.net/img/2410473)
 
 因为它只会存在于某一个 Redis Master 上，而 Redis 又不是基于 CP 模型的。那么就会有很大概率存在锁丢失的情况。以如下场景为例：
