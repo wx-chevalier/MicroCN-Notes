@@ -290,19 +290,19 @@ OrderTccAction.java
 public interface OrderTccAction {
 
     /**
-     * try 尝试
+     - try 尝试
      *
-     * BusinessActionContext 上下文对象，用来在两个阶段之间传递数据
-     * BusinessActionContextParameter 注解的参数数据会被存入 BusinessActionContext
-     * TwoPhaseBusinessAction 注解中commitMethod、rollbackMethod 属性有默认值，可以不写
+     - BusinessActionContext 上下文对象，用来在两个阶段之间传递数据
+     - BusinessActionContextParameter 注解的参数数据会被存入 BusinessActionContext
+     - TwoPhaseBusinessAction 注解中commitMethod、rollbackMethod 属性有默认值，可以不写
      *
-     * @param businessActionContext
-     * @param orderNo
-     * @param userId
-     * @param productId
-     * @param amount
-     * @param money
-     * @return
+     - @param businessActionContext
+     - @param orderNo
+     - @param userId
+     - @param productId
+     - @param amount
+     - @param money
+     - @return
      */
     @TwoPhaseBusinessAction(name = "orderTccAction")
     boolean prepareCreateOrder(BusinessActionContext businessActionContext,
@@ -313,16 +313,16 @@ public interface OrderTccAction {
                                @BusinessActionContextParameter(paramName = "money") BigDecimal money);
 
     /**
-     * commit 提交
-     * @param businessActionContext
-     * @return
+     - commit 提交
+     - @param businessActionContext
+     - @return
      */
     boolean commit(BusinessActionContext businessActionContext);
 
     /**
-     * cancel 撤销
-     * @param businessActionContext
-     * @return
+     - cancel 撤销
+     - @param businessActionContext
+     - @return
      */
     boolean rollback(BusinessActionContext businessActionContext);
 }
@@ -340,19 +340,19 @@ public class OrderTccActionImpl implements OrderTccAction {
     }
 
     /**
-     * try 尝试
+     - try 尝试
      *
-     * BusinessActionContext 上下文对象，用来在两个阶段之间传递数据
-     * BusinessActionContextParameter 注解的参数数据会被存入 BusinessActionContext
-     * TwoPhaseBusinessAction 注解中commitMethod、rollbackMethod 属性有默认值，可以不写
+     - BusinessActionContext 上下文对象，用来在两个阶段之间传递数据
+     - BusinessActionContextParameter 注解的参数数据会被存入 BusinessActionContext
+     - TwoPhaseBusinessAction 注解中commitMethod、rollbackMethod 属性有默认值，可以不写
      *
-     * @param businessActionContext
-     * @param orderNo
-     * @param userId
-     * @param productId
-     * @param amount
-     * @param money
-     * @return
+     - @param businessActionContext
+     - @param orderNo
+     - @param userId
+     - @param productId
+     - @param amount
+     - @param money
+     - @return
      */
     @Transactional(rollbackFor = Exception.class)
     @Override
@@ -368,10 +368,10 @@ public class OrderTccActionImpl implements OrderTccAction {
     }
 
     /**
-     * commit 提交
+     - commit 提交
      *
-     * @param businessActionContext
-     * @return
+     - @param businessActionContext
+     - @return
      */
     @Transactional(rollbackFor = Exception.class)
     @Override
@@ -383,8 +383,8 @@ public class OrderTccActionImpl implements OrderTccAction {
         }
 
         /**
-         * 上下文对象从第一阶段向第二阶段传递时，先转成了json数据，然后还原成上下文对象
-         * 其中的整数比较小的会转成Integer类型，所以如果需要Long类型，需要先转换成字符串在用Long.valueOf()解析。
+         - 上下文对象从第一阶段向第二阶段传递时，先转成了json数据，然后还原成上下文对象
+         - 其中的整数比较小的会转成Integer类型，所以如果需要Long类型，需要先转换成字符串在用Long.valueOf()解析。
          */
         String orderNo = businessActionContext.getActionContext("orderNo").toString();
         orderMapper.updateStatusByOrderNo(orderNo, 1);
@@ -394,14 +394,14 @@ public class OrderTccActionImpl implements OrderTccAction {
     }
 
     /**
-     * cancel 撤销
+     - cancel 撤销
      *
-     * 第一阶段没有完成的情况下，不必执行回滚。因为第一阶段有本地事务，事务失败时已经进行了回滚。
-     * 如果这里第一阶段成功，而其他全局事务参与者失败，这里会执行回滚
-     * 幂等性控制：如果重复执行回滚则直接返回
+     - 第一阶段没有完成的情况下，不必执行回滚。因为第一阶段有本地事务，事务失败时已经进行了回滚。
+     - 如果这里第一阶段成功，而其他全局事务参与者失败，这里会执行回滚
+     - 幂等性控制：如果重复执行回滚则直接返回
      *
-     * @param businessActionContext
-     * @return
+     - @param businessActionContext
+     - @return
      */
     @Transactional(rollbackFor = Exception.class)
     @Override
@@ -441,8 +441,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     /**
-     * 创建订单
-     * @param orderDO
+     - 创建订单
+     - @param orderDO
      */
     @GlobalTransactional
     @Override
